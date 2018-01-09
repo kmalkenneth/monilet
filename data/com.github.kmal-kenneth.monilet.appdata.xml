@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2017 Your Name <you@email.com> -->
+<component type="desktop">
+  <id>com.github.kmal-kenneth.monilet.desktop</id>
+  <metadata_license>CC0</metadata_license>
+  <name>Monilet</name>
+  <summary>A monitor applet.</summary>
+  <description>
+    <p>It's a system monitor applet.</p>
+  </description>
+  <custom>
+     <value key="x-appcenter-color-primary">#603461</value>
+     <value key="x-appcenter-color-primary-text">rgb(255, 255, 255)</value>
+     <value key="x-appcenter-suggested-price">1</value>
+  </custom>
+</component>
