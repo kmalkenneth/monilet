@@ -37,6 +37,10 @@ namespace monitor {
             } else {
                 window.present ();
             }
+            
+            var provider = new Gtk.CssProvider ();
+            provider.load_from_resource ("com/github/kmal-kenneth/monilet/Application.css");
+            Gtk.StyleContext.add_provider_for_screen (Gdk.Screen.get_default (), provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
         }
 
         public static int main (string[] args) {

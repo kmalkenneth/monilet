@@ -21,33 +21,46 @@
 
 namespace monitor {
 
-    public class MainWindow : Gtk.ApplicationWindow {
+    public class MainWindow : Gtk.Dialog {
         // application reference
-        private Application app;
+        //private Application app;
 
         // Widgets
-        private Gtk.HeaderBar header;
+        //private Gtk.HeaderBar header;
 
         public MainWindow (Application app) {
-            this.app = app;
-            this.set_application (this.app);
-            this.set_default_size (880, 720);
+            Object (application: app,
+                    resizable: false,
+                    title: _("Nimbus"),
+                    height_request: 272,
+                    width_request: 500);
+            //this.app = app;
+            //this.set_application (this.app);
+            //this.set_default_size (880, 720);
             this.window_position = Gtk.WindowPosition.CENTER;
-            this.get_style_context ().add_class ("rounded");
+            //this.get_style_context ().add_class ("rounded");
 
             setup_ui ();
+        }
+        
+        construct {
+            get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
+            //set_keep_below (true);
+            //stick ();
+            
+            
         }
 
          private void setup_ui () {
             // setup header bar
-            header = new Gtk.HeaderBar ();
-            header.show_close_button = true;
+            //header = new Gtk.HeaderBar ();
+            //header.show_close_button = true;
             //header.get_style_context ().add_class ("default-decoration");
-            header.title = _("Monitor");
-            header.subtitle = _("A litle system monitor");
+            //header.title = _("Monitor");
+            //header.subtitle = _("A litle system monitor");
 
             //add (layout);
-            this.set_titlebar (header);
+            //this.set_titlebar (header);
         }
 
     }

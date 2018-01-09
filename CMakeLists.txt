@@ -46,6 +46,10 @@
     set (GETTEXT_PACKAGE "${CMAKE_PROJECT_NAME}")
     add_definitions (-DGETTEXT_PACKAGE=\"${GETTEXT_PACKAGE}\")
     add_subdirectory (po)
+    
+    # add GResource for css style
+    include (GResource)
+    glib_compile_resources (GLIB_RESOURCES_CSS SOURCE data/com.github.kmal-kenneth.monilet.gresource.xml)
 
     # make sure we have vala
     find_package(Vala REQUIRED)
@@ -67,10 +71,13 @@
         # tell what libraries to use when compiling
         CUSTOM_VAPIS
             vapi/libgtop-2.0.vapi
+        OPTIONS
+            --thread
+            --vapidir=${CMAKE_CURRENT_SOURCE_DIR}/vapi/
     )
     
     # tell cmake what to call the executable we just made
-    add_executable(${EXEC_NAME} ${VALA_C})
+    add_executable(${EXEC_NAME} ${VALA_C} ${GLIB_RESOURCES_CSS})
 
     # install the binaries we just made
     install (TARGETS ${EXEC_NAME} RUNTIME DESTINATION bin)
