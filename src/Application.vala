@@ -19,7 +19,7 @@
 * Authored by: Kenet Mauricio Acuña Lago <kmal.kenneth@live.com>
 */
 
-namespace monitor {
+namespace monilet {
 
     public class Application : Gtk.Application {
         private MainWindow window = null;

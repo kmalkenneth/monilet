@@ -19,7 +19,7 @@
 * Authored by: Kenet Mauricio Acuña Lago <kmal.kenneth@live.com>
 */
 
-namespace monitor {
+namespace monilet {
 
     public class MainWindow : Gtk.Dialog {
         // application reference
@@ -27,6 +27,8 @@ namespace monitor {
 
         // Widgets
         //private Gtk.HeaderBar header;
+        private ProgressCPU progress_cpu;
+        private CPU cpu;
 
         public MainWindow (Application app) {
             Object (application: app,
@@ -41,15 +43,30 @@ namespace monitor {
             //this.get_style_context ().add_class ("rounded");
 
             setup_ui ();
+            
+            update ();
         }
         
         construct {
             get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
+            
+            cpu = new CPU ();
+            progress_cpu = new ProgressCPU ();
             //set_keep_below (true);
             //stick ();
             
-            
+            var content_box = get_content_area () as Gtk.Box;
+            content_box.border_width = 0;
+            content_box.add (progress_cpu);
+            content_box.show_all ();
         }
+        
+        private void update () {
+    	    Timeout.add_seconds (1, () => {
+    	        progress_cpu.progress = cpu.percentage_used;
+               return true;
+           });
+    	}
 
          private void setup_ui () {
             // setup header bar

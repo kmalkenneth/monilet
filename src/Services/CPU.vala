@@ -1,20 +1,16 @@
-namespace monitor {
+namespace monilet {
     public class CPU  : GLib.Object {        
         private float last_total;
         private float last_used;
         
         private int _quantity_cores;
-        private float _percentage_used;
-        private Core[] _cores;
+        private int _percentage_used;
         
-        public float percentage_used {
+        public int percentage_used {
             get { update_percentage_used (); return _percentage_used; }
         }
         public int quantity_cores {
             get { return _quantity_cores; }
-        }
-        public Core[] cores {
-            get { return _cores; }
         }
         
         public CPU (){
@@ -24,11 +20,6 @@ namespace monitor {
         
         construct {
             update_quantity_cores ();
-            _cores = new Core[quantity_cores];
-            
-            for (int i = 0; i < quantity_cores; i++){
-                _cores[i] = new Core (i);
-            }
         }
         
         private void update_percentage_used (){
@@ -40,7 +31,7 @@ namespace monitor {
     		var difference_total = (float) cpu.total - last_total;                  // calculate the difference total
     		var pre_percentage = difference_used.abs () / difference_total.abs ();  // calculate the pre percentage
     		
-            _percentage_used = pre_percentage * 100;
+            _percentage_used = (int) Math.round(pre_percentage * 100);
     
             last_used = (float) used;
             last_total = (float) cpu.total;
