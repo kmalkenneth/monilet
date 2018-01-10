@@ -41,10 +41,9 @@ namespace monilet {
             //this.set_default_size (880, 720);
             this.window_position = Gtk.WindowPosition.CENTER;
             //this.get_style_context ().add_class ("rounded");
-
-            setup_ui ();
             
             update ();
+            //progress_cpu.progress = 70;
         }
         
         construct {

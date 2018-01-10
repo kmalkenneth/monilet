@@ -83,7 +83,7 @@ namespace monilet {
             var center_y = allocation.height / 2;
             var radius = calculate_diameter () / 2;
 
-            draw_arc (cr, center_x, center_y, radius, 225, 315, 63, 91, 94, 1);          
+            draw_arc (cr, center_x, center_y, radius);          
 
             cr.save ();
 
@@ -115,21 +115,32 @@ namespace monilet {
             porcentage_text_update (cr, center_x, center_y);
             
             if ( _progress > 0) {
+                //var arc_progress = 2.35 + ((270 * porcentage)/ 180 * Math.PI);
                 var porcentage = (float) progress / 100;
-                var arc_progress = 2.35 + ((270 * porcentage)/ 180 * Math.PI);
+                var preprogress = 270 * porcentage + 135;
+                var arc_progress = 0;
+                if (preprogress > 360) {
+                    arc_progress = (int) Math.round(preprogress.abs() - 360);
+                } else {
+                    arc_progress = (int) Math.round(preprogress);
+                }
                 //stdout.printf("value %.2f \n", arc_progress);
+                
                 cr.save ();
                 
                 cr.set_line_width (line_width);
                 cr.set_line_cap (LineCap.ROUND);
                 cr.set_line_join (LineJoin.ROUND);
                 
-                cr.move_to (center_x - radius * 0.67, center_y + radius * 0.67);
-    	
-                cr.set_source_rgba (0.35, 0.85, 0.73, 1);
-                cr.arc (center_x, center_y, radius - line_width / 2, 2.35, arc_progress);
+                float x, y;
+                get_point_circuferens (radius - line_width / 2, 225, (float) center_x, (float) center_y, out x, out y);
+    
+                cr.move_to (x, y);
+    
+                cr.set_source_rgba (convert_rgb_gtk (91), convert_rgb_gtk (218), convert_rgb_gtk (188), 1);
+                cr.arc (center_x, center_y, radius - line_width / 2, convert_radians (135), convert_radians (arc_progress));
                 cr.stroke ();
-
+                
                 cr.restore ();
             }
         }
@@ -200,7 +211,7 @@ namespace monilet {
             return (float) color / 225;
         }
         
-        private void draw_arc (Cairo.Context cr, double center_x, double center_y, float radius, double start_angle, float end_angle, int r, int g, int b, float a){
+        private void draw_arc (Cairo.Context cr, double center_x, double center_y, float radius){
             cr.save ();
             
             cr.set_line_width (line_width / 2);
@@ -212,7 +223,6 @@ namespace monilet {
 
             cr.move_to (x, y);
 
-            //cr.set_source_rgba (0.24, 0.35, 0.36, 1);
             cr.set_source_rgba (convert_rgb_gtk (63), convert_rgb_gtk (91), convert_rgb_gtk (94), 1);
             cr.arc (center_x, center_y, radius - line_width / 2, convert_radians (135), convert_radians (45));
             cr.stroke ();
