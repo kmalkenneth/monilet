@@ -65,6 +65,8 @@
         src/MainWindow.vala
         
         src/Services/CPU.vala
+ 
+        src/Utils/UtilsWidget.vala
         
         src/Widgets/ProgressCPU.vala
 
