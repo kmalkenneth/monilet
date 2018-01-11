@@ -33,15 +33,15 @@ namespace monilet {
             /* porcentage tag */
             description_porcentage = new FontDescription();
             description_porcentage.set_size ((int)(20 * Pango.SCALE));
-            description_porcentage.set_weight (Weight.SEMIBOLD);
+            description_porcentage.set_weight (Weight.BOLD);
             
             layout_porcentage = create_pango_layout ("%d%%".printf(progress));
             layout_porcentage.set_font_description (description_porcentage);
                         
             /* name tag */
             description_name = new FontDescription();
-            description_name.set_size ((int)(20 * Pango.SCALE));
-            description_name.set_weight (Weight.BOLD);
+            description_name.set_size ((int)(12 * Pango.SCALE));
+            description_name.set_weight (Weight.SEMIBOLD);
             
             layout_name = create_pango_layout ("CPU");
             layout_name.set_font_description (description_name);
@@ -89,17 +89,23 @@ namespace monilet {
 
             cr.set_source_rgba (0.94, 0.95, 0.97, 1);
 
+            float x, y;
             int fontw, fonth;
+
+            get_point_circuferens ( 12, 90, (float) center_x, (float) center_y, out x, out y);
             layout_porcentage.get_pixel_size (out fontw, out fonth);
-            cr.move_to (center_x - (fontw / 2), center_y - (fonth / 2));
+            
+            cr.move_to (x - (fontw / 2), y - (fonth / 2));
             
             porcentage_text_update (cr, center_x, center_y);            
             cairo_show_layout (cr, layout_porcentage);
 
             cr.set_source_rgba (0.55, 0.56, 0.60, 1);
-            int fontw2, fonth2;
-            layout_name.get_pixel_size (out fontw2, out fonth2);
-            cr.move_to (center_x - (fontw2 / 2), center_y + (radius/2));
+
+            layout_name.get_pixel_size (out fontw, out fonth);
+            get_point_circuferens ( 12, 270, (float) center_x, (float) center_y, out x, out y);
+
+            cr.move_to (x - (fontw / 2), y - (fonth / 2));
             
             cairo_update_layout (cr, layout_name);
             cairo_show_layout (cr, layout_name);
@@ -148,9 +154,13 @@ namespace monilet {
         public void porcentage_text_update (Cairo.Context cr, int center_x, int center_y){
             layout_porcentage.set_text ("%d%%".printf(_progress), -1);
             
+            float x, y;
             int fontw, fonth;
+ 
+            get_point_circuferens ( 12, 90, (float) center_x, (float) center_y, out x, out y);
             layout_porcentage.get_pixel_size (out fontw, out fonth);
-            cr.move_to (center_x - (fontw / 2), center_y - (fonth / 2));
+
+            cr.move_to (x - (fontw / 2), y - (fonth / 2));
             
             cairo_update_layout (cr, layout_porcentage);
         }
