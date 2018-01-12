@@ -37,7 +37,7 @@ namespace monilet {
         
             /* porcentage tag */
             description_porcentage = new FontDescription();
-            description_porcentage.set_size ((int)(20 * Pango.SCALE));
+            description_porcentage.set_size ((int)(18 * Pango.SCALE));
             description_porcentage.set_weight (Weight.BOLD);
             
             layout_porcentage = create_pango_layout ("%d%%".printf(progress));
@@ -45,7 +45,7 @@ namespace monilet {
                         
             /* name tag */
             description_name = new FontDescription();
-            description_name.set_size ((int)(12 * Pango.SCALE));
+            description_name.set_size ((int)(10 * Pango.SCALE));
             description_name.set_weight (Weight.SEMIBOLD);
             
             layout_name = create_pango_layout ("CPU");

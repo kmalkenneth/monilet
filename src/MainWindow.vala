@@ -67,7 +67,6 @@ namespace monilet {
             grid.margin_bottom = 6;
             grid.margin_end = 18;
             grid.margin_start = 18;
-            //grid.column_homogeneous = true;
             
             var spinner = new Gtk.Spinner ();
             spinner.active = false;
@@ -77,7 +76,6 @@ namespace monilet {
             
             grid.attach (widget_cpu, 0, 0, 1, 1);
             grid.attach (spinner, 1, 0, 1, 1);
-            //grid.attach (weather_label, 2, 0, 1, 1);
             grid.attach (widget_memory, 2, 0, 1, 1);
             
             var content_box = get_content_area () as Gtk.Box;
@@ -89,6 +87,9 @@ namespace monilet {
         private void update () {
     	    Timeout.add_seconds (1, () => {
     	        widget_cpu.progress = cpu.percentage_used;
+    	        widget_memory.progress = memory.percentage_used;
+    	        widget_memory.used = memory.used;
+    	        widget_memory.total = memory.total;
                return true;
            });
     	}

@@ -1,10 +1,10 @@
 namespace monilet {
     public class Memory  : GLib.Object {        
-        private float _percentage_used;
+        private int _percentage_used;
         private float _total;
         private float _used;
         
-        public float percentage_used {
+        public int percentage_used {
             get { update_percentage_used (); return _percentage_used; }
         }
         public float total {
@@ -21,7 +21,7 @@ namespace monilet {
         }
         
         private void update_percentage_used (){
-            _percentage_used = ((used / total) * 100);
+            _percentage_used = (int) Math.round((used / total) * 100);
         }
         
         private void update_total (){
