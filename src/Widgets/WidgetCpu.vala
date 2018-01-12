@@ -226,7 +226,7 @@ namespace monilet {
         }
             
         public void porcentage_text_update (Cairo.Context cr, int center_x, int center_y){
-            layout_porcentage.set_text ("%d%%".printf(_progress), -1);
+            layout_porcentage.set_text ("%d".printf(_progress), -1);
             
             float x, y;
             int fontw, fonth;
