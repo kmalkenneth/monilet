@@ -4,7 +4,7 @@ using Math;
 
 namespace monilet {
 
-    public class WidgetCpu : Gtk.Bin {
+    public class WidgetMemory : Gtk.Bin {
         private int line_width = 6;
         private int radius_pad = 64;
         
@@ -15,7 +15,8 @@ namespace monilet {
         
         private UtilsWidget util;
         
-        public  int cores { get; set; default = 0;}
+        public  float used { get; set; default = 0;}
+        public  float total { get; set; default = 0;}
         private  int _progress = 0;
         public int progress {
             get { return _progress;}
@@ -48,7 +49,7 @@ namespace monilet {
             description_name.set_size ((int)(10 * Pango.SCALE));
             description_name.set_weight (Weight.SEMIBOLD);
             
-            layout_name = create_pango_layout ("CPU");
+            layout_name = create_pango_layout ("Memory");
             layout_name.set_font_description (description_name);
         }
         
@@ -61,7 +62,7 @@ namespace monilet {
 
             draw_arc (cr, center_x, center_y, radius);
                       
-            draw_core (cr, center_x, center_y, radius);
+            draw_used (cr, center_x, center_y, radius);
                       
             draw_numbers (cr, center_x, center_y, radius);          
 
@@ -116,7 +117,7 @@ namespace monilet {
             cr.restore ();
         }
         
-        private void draw_core (Cairo.Context cr, double center_x, double center_y, float radius){
+        private void draw_used (Cairo.Context cr, double center_x, double center_y, float radius){
             cr.save ();
             
             cr.set_line_width (line_width / 2);
@@ -135,7 +136,7 @@ namespace monilet {
             description.set_size ((int)(10 * Pango.SCALE));
             description.set_weight (Weight.NORMAL);
             
-            var layout = create_pango_layout ("%d".printf(cores));
+            var layout = create_pango_layout ("%.1f %s / %.1f %s".printf(used, _("GiB"), total, _("GiB")));
             layout.set_font_description (description);
             
             int fontw, fonth;

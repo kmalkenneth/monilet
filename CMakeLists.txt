@@ -16,10 +16,10 @@
 
     set (EXEC_NAME "com.github.kmal-kenneth.monilet")
     set (RELEASE_NAME "A system monitor applet.")
-    set (VERSION "0.1")
+    set (VERSION "0.2")
     set (VERSION_INFO "Initial verion.")
 
-    # we're about to use pkgconfig to make sure dependencies are installed so let's find pkgconfig first
+    # we're about to use pkgconfig to make sugiyre dependencies are installed so let's find pkgconfig first
     find_package(PkgConfig)
     
     set (MONITOR_DEPS
@@ -65,8 +65,10 @@
         src/MainWindow.vala
         
         src/Widgets/WidgetCpu.vala
+        src/Widgets/WidgetMemory.vala
         
         src/Services/CPU.vala
+        src/Services/Memory.vala
  
         src/Utils/UtilsWidget.vala
 
