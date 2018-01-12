@@ -7,7 +7,7 @@ See percentage of use your CPU and Alse percentage used memory, amount of memory
 
 ![Monilet Screenshot](https://raw.github.com/kmal-kenneth/monilet/master/data/screenshot.png)
 
-## Building, Testing, and Installation
+## Building and Installation
 
 You'll need the following dependencies to build:
 
