@@ -1,9 +1,9 @@
 # Monilet
-[![Get it on AppCenter](https://appcenter.elementary.io/badge.svg)](https://appcenter.elementary.io/com.github.danrabbit.nimbu) Coming soon.
+Coming soon in [![Get it on AppCenter](https://appcenter.elementary.io/badge.svg)](https://appcenter.elementary.io/com.github.danrabbit.nimbu) Full code in [![Full Code](https://raw.github.com/kmal-kenneth/monilet/master/data/badge.svg)](https://gitlab.com/kmal-kenneth/monilet)
 
 See percentage of use your CPU and Alse percentage used memory, amount of memory used and total memory.
 
-![Nimbus Screenshot](https://raw.github.com/kmal-kenneth/monilet/master/data/screenshot.png)
+![Monilet Screenshot](https://raw.github.com/kmal-kenneth/monilet/master/data/screenshot.png)
 
 ## Building, Testing, and Installation
 
@@ -22,7 +22,7 @@ You'll need the following dependencies to run:
 * gtop2
 
 Run `cmake -DCMAKE_INSTALL_PREFIX=/usr ../` to configure the build environment and run `make` to build.
-
+	
     cmake -DCMAKE_INSTALL_PREFIX=/usr ../
     make
 
