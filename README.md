@@ -1,5 +1,5 @@
 # Monilet
-[![Get it on AppCenter](https://appcenter.elementary.io/badge.svg)](https://appcenter.elementary.io/com.github.danrabbit.nimbu) 
+[![Get it on AppCenter](https://appcenter.elementary.io/badge.svg)](https://appcenter.elementary.io/com.github.kmal-kenneth.monilet) 
 
 [![Full Code](https://raw.github.com/kmal-kenneth/monilet/master/data/badge.png)](https://gitlab.com/kmal-kenneth/monilet)
 
