@@ -1,5 +1,6 @@
 # Monilet
-Coming soon in [![Get it on AppCenter](https://appcenter.elementary.io/badge.svg)](https://appcenter.elementary.io/com.github.danrabbit.nimbu) Full code in [![Full Code](https://raw.github.com/kmal-kenneth/monilet/master/data/badge.svg)](https://gitlab.com/kmal-kenneth/monilet)
+
+<center>[![Get it on AppCenter](https://appcenter.elementary.io/badge.svg)](https://appcenter.elementary.io/com.github.danrabbit.nimbu)  [![Full Code](https://raw.github.com/kmal-kenneth/monilet/master/data/badge.svg)](https://gitlab.com/kmal-kenneth/monilet)</center>
 
 See percentage of use your CPU and Alse percentage used memory, amount of memory used and total memory.
 
