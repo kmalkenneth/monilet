@@ -9,8 +9,8 @@
     <p>It's a system monitor applet.</p>
   </description>
   <custom>
-     <value key="x-appcenter-color-primary">#603461</value>
-     <value key="x-appcenter-color-primary-text">rgb(255, 255, 255)</value>
+     <value key="x-appcenter-color-primary">#292B37</value>
+     <value key="x-appcenter-color-primary-text">#67F8D5</value>
      <value key="x-appcenter-suggested-price">1</value>
   </custom>
 </component>
