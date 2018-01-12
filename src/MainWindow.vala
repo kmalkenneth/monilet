@@ -24,36 +24,26 @@ using Gtk;
 namespace monilet {
 
     public class MainWindow : Gtk.Dialog {
-        // application reference
-        //private Application app;
-
-        // Widgets
-        //private Gtk.HeaderBar header;
         private WidgetCpu widget_cpu;
         private WidgetMemory widget_memory;
         private CPU cpu;
         private Memory memory;
 
-        public MainWindow (Application app) {
+        public MainWindow (Gtk.Application app) {
             Object (application: app,
                     resizable: false,
-                    title: _("Nimbus"),
+                    title: _("Monilet"),
                     height_request: 272,
                     width_request: 500);
-            //this.app = app;
-            //this.set_application (this.app);
-            //this.set_default_size (880, 720);
-            this.window_position = Gtk.WindowPosition.CENTER;
-            //this.get_style_context ().add_class ("rounded");
             
             widget_cpu.cores = cpu.quantity_cores;
             update ();
-            
-            //progress_cpu.progress = 70;
         }
         
         construct {
             get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
+            set_keep_below (true);
+            stick ();
             
             cpu = new CPU ();
             memory = new Memory ();
@@ -82,6 +72,14 @@ namespace monilet {
             content_box.border_width = 0;
             content_box.add (grid);
             content_box.show_all ();
+            
+            button_press_event.connect ((e) => {
+                if (e.button == Gdk.BUTTON_PRIMARY) {
+                    begin_move_drag ((int) e.button, (int) e.x_root, (int) e.y_root, e.time);
+                    return true;
+                }
+                return false;
+            });
         }
         
         private void update () {

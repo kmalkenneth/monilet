@@ -41,15 +41,6 @@
     # add the directory of gtop for bindigs
     link_libraries(${WNCK_LIBRARIES} gtop-2.0 -lm)
     include_directories(/usr/include/libgtop-2.0)
-    
-    # Translation files
-    set (GETTEXT_PACKAGE "${CMAKE_PROJECT_NAME}")
-    add_definitions (-DGETTEXT_PACKAGE=\"${GETTEXT_PACKAGE}\")
-    add_subdirectory (po)
-    
-    # add GResource for css style
-    include (GResource)
-    glib_compile_resources (GLIB_RESOURCES_CSS SOURCE data/com.github.kmal-kenneth.monilet.gresource.xml)
 
     # make sure we have vala
     find_package(Vala REQUIRED)
@@ -83,6 +74,18 @@
             --thread
             --vapidir=${CMAKE_CURRENT_SOURCE_DIR}/vapi/
     )
+    
+    # add GResource for css style
+    include (GResource)
+    glib_compile_resources (GLIB_RESOURCES_CSS SOURCE data/com.github.kmal-kenneth.monilet.gresource.xml)
+    
+    include (GSettings)
+    add_schema ("data/com.github.kmal-kenneth.monilet.gschema.xml")
+    
+    # Translation files
+    set (GETTEXT_PACKAGE "${CMAKE_PROJECT_NAME}")
+    add_definitions (-DGETTEXT_PACKAGE=\"${GETTEXT_PACKAGE}\")
+    add_subdirectory (po)
     
     # tell cmake what to call the executable we just made
     add_executable(${EXEC_NAME} ${VALA_C} ${GLIB_RESOURCES_CSS})

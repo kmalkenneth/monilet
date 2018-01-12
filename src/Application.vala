@@ -21,30 +21,56 @@
 
 namespace monilet {
 
-    public class Application : Gtk.Application {
-        private MainWindow window = null;
-
-        public Application () {
-            Object (application_id: "com.github.kmal-kenneth.monitor",
+    public class Monilet : Gtk.Application {
+        public Monilet () {
+            Object (application_id: "com.github.kmal-kenneth.monilet",
             flags: ApplicationFlags.FLAGS_NONE);
         }
-
+    
         protected override void activate () {
-            // only have one window
-            if (get_windows () == null) {
-                window = new MainWindow (this);
-                window.show_all ();
-            } else {
-                window.present ();
+            if (get_windows ().length () > 0) {
+                get_windows ().data.present ();
+                return;
             }
-            
+    
+            var app_window = new MainWindow (this);
+    
+            var settings = new Settings ("com.github.kmal-kenneth.monilet");
+    
+            var window_x = settings.get_int ("window-x");
+            var window_y = settings.get_int ("window-y");
+    
+            if (window_x != -1 ||  window_y != -1) {
+                app_window.move (window_x, window_y);
+            }
+    
+            app_window.show ();
+    
+            var quit_action = new SimpleAction ("quit", null);
+    
+            add_action (quit_action);
+            add_accelerator ("<Control>q", "app.quit", null);
+    
             var provider = new Gtk.CssProvider ();
             provider.load_from_resource ("com/github/kmal-kenneth/monilet/Application.css");
             Gtk.StyleContext.add_provider_for_screen (Gdk.Screen.get_default (), provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
+    
+            quit_action.activate.connect (() => {
+                if (app_window != null) {
+                    app_window.destroy ();
+                }
+            });
+    
+            app_window.state_changed.connect (() => {
+                int root_x, root_y;
+                app_window.get_position (out root_x, out root_y);
+                settings.set_int ("window-x", root_x);
+                settings.set_int ("window-y", root_y);
+            });
         }
-
+    
         public static int main (string[] args) {
-            var app = new Application ();
+            var app = new Monilet ();
             return app.run (args);
         }
     }
