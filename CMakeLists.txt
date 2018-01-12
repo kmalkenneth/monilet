@@ -16,7 +16,7 @@
 
     set (EXEC_NAME "com.github.kmal-kenneth.monilet")
     set (RELEASE_NAME "A system monitor applet.")
-    set (VERSION "0.2")
+    set (VERSION "0.3")
     set (VERSION_INFO "Initial verion.")
 
     # we're about to use pkgconfig to make sugiyre dependencies are installed so let's find pkgconfig first
