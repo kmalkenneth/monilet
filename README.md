@@ -3,7 +3,7 @@
 
 [![Full Code](https://raw.github.com/kmal-kenneth/monilet/master/data/badge.png)](https://gitlab.com/kmal-kenneth/monilet)
 
-See percentage of use your CPU and Alse percentage used memory, amount of memory used and total memory.
+See percentage of use your CPU and number of cores. Also percentage used memory, amount of memory used and total memory.
 
 ![Monilet Screenshot](https://raw.github.com/kmal-kenneth/monilet/master/data/screenshot.png)
 
