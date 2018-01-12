@@ -1,4 +1,4 @@
-namespace monitor {
+namespace monilet {
     public class Memory  : GLib.Object {        
         private float _percentage_used;
         private float _total;

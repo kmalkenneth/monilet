@@ -19,6 +19,8 @@
 * Authored by: Kenet Mauricio Acuña Lago <kmal.kenneth@live.com>
 */
 
+using Gtk;
+
 namespace monilet {
 
     public class MainWindow : Gtk.Dialog {
@@ -28,7 +30,9 @@ namespace monilet {
         // Widgets
         //private Gtk.HeaderBar header;
         private WidgetCpu widget_cpu;
+        private WidgetMemory widget_memory;
         private CPU cpu;
+        private Memory memory;
 
         public MainWindow (Application app) {
             Object (application: app,
@@ -52,13 +56,33 @@ namespace monilet {
             get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
             
             cpu = new CPU ();
+            memory = new Memory ();
             widget_cpu = new WidgetCpu ();
+            widget_memory = new WidgetMemory ();
             //set_keep_below (true);
             //stick ();
             
+            var grid = new Gtk.Grid ();
+            grid.column_spacing = 12;
+            grid.margin_bottom = 6;
+            grid.margin_end = 18;
+            grid.margin_start = 18;
+            //grid.column_homogeneous = true;
+            
+            var spinner = new Gtk.Spinner ();
+            spinner.active = false;
+            spinner.halign = Gtk.Align.CENTER;
+            spinner.vexpand = true;
+            spinner.hexpand = true;
+            
+            grid.attach (widget_cpu, 0, 0, 1, 1);
+            grid.attach (spinner, 1, 0, 1, 1);
+            //grid.attach (weather_label, 2, 0, 1, 1);
+            grid.attach (widget_memory, 2, 0, 1, 1);
+            
             var content_box = get_content_area () as Gtk.Box;
             content_box.border_width = 0;
-            content_box.add (widget_cpu);
+            content_box.add (grid);
             content_box.show_all ();
         }
         
@@ -68,18 +92,6 @@ namespace monilet {
                return true;
            });
     	}
-
-         private void setup_ui () {
-            // setup header bar
-            //header = new Gtk.HeaderBar ();
-            //header.show_close_button = true;
-            //header.get_style_context ().add_class ("default-decoration");
-            //header.title = _("Monitor");
-            //header.subtitle = _("A litle system monitor");
-
-            //add (layout);
-            //this.set_titlebar (header);
-        }
 
     }
 }

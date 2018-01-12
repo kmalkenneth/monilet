@@ -65,8 +65,10 @@
         src/MainWindow.vala
         
         src/Widgets/WidgetCpu.vala
+        src/Widgets/WidgetMemory.vala
         
         src/Services/CPU.vala
+        src/Services/Memory.vala
  
         src/Utils/UtilsWidget.vala
 
