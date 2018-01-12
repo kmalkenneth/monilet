@@ -64,11 +64,11 @@
         src/Application.vala
         src/MainWindow.vala
         
+        src/Widgets/WidgetCpu.vala
+        
         src/Services/CPU.vala
  
         src/Utils/UtilsWidget.vala
-        
-        src/Widgets/ProgressCPU.vala
 
         # tell what libraries to use when compiling
         PACKAGES

@@ -4,7 +4,7 @@ using Math;
 
 namespace monilet {
 
-    public class ProgressCPU : Gtk.Bin {
+    public class WidgetCpu : Gtk.Bin {
         private int line_width = 6;
         private int radius_pad = 64;
         
@@ -15,6 +15,7 @@ namespace monilet {
         
         private UtilsWidget util;
         
+        public  int cores { get; set; default = 0;}
         private  int _progress = 0;
         public int progress {
             get { return _progress;}
@@ -58,7 +59,9 @@ namespace monilet {
             var center_y = allocation.height / 2;
             var radius = calculate_diameter () / 2;
 
-            draw_arc (cr, center_x, center_y, radius);          
+            draw_arc (cr, center_x, center_y, radius);
+                      
+            draw_core (cr, center_x, center_y, radius);          
 
             cr.save ();
 
@@ -107,6 +110,38 @@ namespace monilet {
             cr.set_source_rgba (util.get_rgb_gtk (63), util.get_rgb_gtk (91), util.get_rgb_gtk (94), 1);
             cr.arc (center_x, center_y, radius - line_width / 2, util.get_radians (135), util.get_radians (45));
             cr.stroke ();
+            
+            cr.restore ();
+        }
+        
+        private void draw_core (Cairo.Context cr, double center_x, double center_y, float radius){
+            cr.save ();
+            
+            cr.set_line_width (line_width / 2);
+            cr.set_line_cap (LineCap.ROUND);
+            cr.set_line_join (LineJoin.ROUND);
+            
+            float x, y;
+            util.get_point_circuference (radius - line_width * 1.5f, 270, (float) center_x, (float) center_y, out x, out y);
+
+            cr.move_to (x, y);
+            
+            cr.set_source_rgba (util.get_rgb_gtk (205), util.get_rgb_gtk (208), util.get_rgb_gtk (213), 1);
+            
+            /* core tag */
+            var description = new FontDescription();
+            description.set_size ((int)(10 * Pango.SCALE));
+            description.set_weight (Weight.NORMAL);
+            
+            var layout = create_pango_layout ("%d".printf(cores));
+            layout.set_font_description (description);
+            
+            int fontw, fonth;
+            layout.get_pixel_size (out fontw, out fonth);
+            cr.move_to (x - fontw / 2, y - fonth / 2);
+            
+            cairo_update_layout (cr, layout);
+            cairo_show_layout (cr, layout);
             
             cr.restore ();
         }

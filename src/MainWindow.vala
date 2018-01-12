@@ -27,7 +27,7 @@ namespace monilet {
 
         // Widgets
         //private Gtk.HeaderBar header;
-        private ProgressCPU progress_cpu;
+        private WidgetCpu widget_cpu;
         private CPU cpu;
 
         public MainWindow (Application app) {
@@ -42,7 +42,9 @@ namespace monilet {
             this.window_position = Gtk.WindowPosition.CENTER;
             //this.get_style_context ().add_class ("rounded");
             
+            widget_cpu.cores = cpu.quantity_cores;
             update ();
+            
             //progress_cpu.progress = 70;
         }
         
@@ -50,19 +52,19 @@ namespace monilet {
             get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
             
             cpu = new CPU ();
-            progress_cpu = new ProgressCPU ();
+            widget_cpu = new WidgetCpu ();
             //set_keep_below (true);
             //stick ();
             
             var content_box = get_content_area () as Gtk.Box;
             content_box.border_width = 0;
-            content_box.add (progress_cpu);
+            content_box.add (widget_cpu);
             content_box.show_all ();
         }
         
         private void update () {
     	    Timeout.add_seconds (1, () => {
-    	        progress_cpu.progress = cpu.percentage_used;
+    	        widget_cpu.progress = cpu.percentage_used;
                return true;
            });
     	}
