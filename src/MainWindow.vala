@@ -31,6 +31,7 @@ namespace monilet {
 
         public MainWindow (Gtk.Application app) {
             Object (application: app,
+                    icon_name: "com.github.kmal-kenneth.monilet",
                     resizable: false,
                     title: _("Monilet"),
                     height_request: 272,

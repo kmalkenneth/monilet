@@ -100,3 +100,6 @@
     # install our .appdata.xml file so AppCenter will see it
     install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/com.github.kmal-kenneth.monilet.appdata.xml DESTINATION ${DATADIR}/metainfo/)
     
+    install(FILES "${CMAKE_CURRENT_SOURCE_DIR}/data/com.github.kmal-kenneth.monilet.svg"
+  DESTINATION share/icons/hicolor/scalable/apps)
+    
