@@ -25,6 +25,7 @@
     set (MONITOR_DEPS
         gtk+-3.0
         granite
+        glib-2.0
         cairo
     )
 
