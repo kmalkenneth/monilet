@@ -1,5 +1,5 @@
-<?xml version="0.1.2" encoding="UTF-8"?>
-<!-- Copyright 2017 Your Name <you@email.com> -->
+<?xml version="0.1.3" encoding="UTF-8"?>
+<!-- Copyright 2018 Kenet Mauricio Acuña Lago <kmal.kenneth@live.com> -->
 <component type="desktop">
   <id>com.github.kmal-kenneth.monilet.desktop</id>
   <metadata_license>CC0-1.0</metadata_license>
@@ -14,11 +14,9 @@
         <li>Quit with the handy shortcut Ctrl + Q</li>
     </ul>
   </description>
-  <custom>
-     <value key="x-appcenter-color-primary">#292B37</value>
-     <value key="x-appcenter-color-primary-text">#67F8D5</value>
-     <!--<value key="x-appcenter-suggested-price">1</value>-->
-  </custom>
+  <provides>
+      <binary>com.github.kmal-kenneth.monilet</binary>
+  </provides>
   <screenshots>
       <screenshot type="default">
           <image>https://raw.githubusercontent.com/kmal-kenneth/monilet/master/data/screenshot.png</image>
@@ -27,11 +25,8 @@
   <developer_name>Kenet Acuña</developer_name>
   <url type="homepage">http://github.com/kmal-kenneth</url>
   <url type="bugtracker">https://github.com/kmal-kenneth/monilet/issues</url>
-  <releases>
-​    <release version="0.1.2" date="2018-01-12">
-​      <description>
-​        <p>Fixes mata data.</p>
-​      </description>
-​    </release>
-​  </releases>
+  <custom>
+     <value key="x-appcenter-color-primary">#292B37</value>
+     <value key="x-appcenter-color-primary-text">#67F8D5</value>
+  </custom>
 </component>
