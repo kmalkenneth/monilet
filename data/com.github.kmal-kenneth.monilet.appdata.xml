@@ -1,16 +1,37 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="0.1.2" encoding="UTF-8"?>
 <!-- Copyright 2017 Your Name <you@email.com> -->
 <component type="desktop">
   <id>com.github.kmal-kenneth.monilet.desktop</id>
-  <metadata_license>CC0</metadata_license>
+  <metadata_license>CC0-1.0</metadata_license>
+  ​<project_license>GPL-3.0+</project_license>
   <name>Monilet</name>
   <summary>A monitor applet.</summary>
   <description>
-    <p>It's a system monitor applet.</p>
+    <p>See percentage of use your CPU and number of cores. Also percentage used memory, amount of memory used and total memory.</p>
+    <ul>
+        <li>Stays out of your way by always sticking to the desktop</li>
+        <li>Move the window by dragging any part of it</li>
+        <li>Quit with the handy shortcut Ctrl + Q</li>
+    </ul>
   </description>
   <custom>
      <value key="x-appcenter-color-primary">#292B37</value>
      <value key="x-appcenter-color-primary-text">#67F8D5</value>
      <!--<value key="x-appcenter-suggested-price">1</value>-->
   </custom>
+  <screenshots>
+      <screenshot type="default">
+          <image>https://raw.githubusercontent.com/kmal-kenneth/monilet/master/data/screenshot.png</image>
+      </screenshot>
+  </screenshots>
+  <developer_name>Kenet Acuña</developer_name>
+  <url type="homepage">http://github.com/kmal-kenneth</url>
+  <url type="bugtracker">https://github.com/kmal-kenneth/monilet/issues</url>
+  <releases>
+​    <release version="0.1.2" date="2018-01-12">
+​      <description>
+​        <p>Fixes mata data.</p>
+​      </description>
+​    </release>
+​  </releases>
 </component>
