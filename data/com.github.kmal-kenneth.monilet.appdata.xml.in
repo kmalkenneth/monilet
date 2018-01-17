@@ -29,4 +29,16 @@
         <value key="x-appcenter-color-primary">#292B37</value>
         <value key="x-appcenter-color-primary-text">#67F8D5</value>
     </custom>
+    <releases>
+      <release version="0.1.5" date="2018-01-16">
+        <description>
+          <p>Release: Add icons, hide the base icon and remove the close button.</p>
+          <ul>
+            <li>Added icons in different sizes (128, 64, 48, 32)</li>
+            <li>It is no longer shown in the dock</li>
+            <li>The close button was removed</li>
+          </ul>
+        </description>
+      </release>
+    </releases>
 </component>
