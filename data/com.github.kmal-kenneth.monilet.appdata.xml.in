@@ -5,7 +5,7 @@
     <metadata_license>CC0-1.0</metadata_license>
     <project_license>GPL-3.0+</project_license>
     <name>Monilet</name>
-    <summary>A monitor applet.</summary>
+    <summary>A monitor applet</summary>
     <description>
         <p>See percentage of use your CPU and number of cores. Also percentage used memory, amount of memory used and total memory.</p>
         <ul>
@@ -29,4 +29,15 @@
         <value key="x-appcenter-color-primary">#292B37</value>
         <value key="x-appcenter-color-primary-text">#67F8D5</value>
     </custom>
+    ​<releases>
+    ​  <release version="0.1.5" date="2018-01-16">
+           <description>
+               <p>Release: New Icons</p>
+               <ul>
+                   <li>Added icons built in different sizes. (128, 64, 48, 32).</li>
+                   <li>New construction system (meson).</li>
+               </ul>
+           </description>
+       </release>
+    ​</releases>
 </component>

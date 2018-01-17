@@ -1,3 +1,16 @@
+icon_sizes = ['32', '48', '64', '128']
+
+foreach i : icon_sizes
+    install_data(
+        join_paths('icons', i, meson.project_name() + '.svg'),
+        install_dir: join_paths(get_option('datadir'), 'icons', 'hicolor', i + 'x' + i, 'apps')
+    )
+    install_data(
+        join_paths('icons', i, meson.project_name() + '.svg'),
+        install_dir: join_paths(get_option('datadir'), 'icons', 'hicolor', i + 'x' + i + '@2', 'apps')
+    )
+endforeach
+
 desktop_file = i18n.merge_file(
   input: 'com.github.kmal-kenneth.monilet.desktop.in',
   output: 'com.github.kmal-kenneth.monilet.desktop',
@@ -22,12 +35,11 @@ appstream_file = i18n.merge_file(
   install_dir: join_paths(get_option('datadir'), 'appdata')
 )
 
-appstream_util = find_program('appstream-util', required: false)
-if appstream_util.found()
-  test('Validate appstream file', appstream_util,
-    args: ['validate', appstream_file]
-  )
-endif
+test (
+    'Validate appdata file',
+    find_program('appstreamcli'),
+    args: ['validate', join_paths(meson.current_build_dir (), meson.project_name() + '.appdata.xml')]
+)
 
 install_data('com.github.kmal-kenneth.monilet.gschema.xml',
   install_dir: join_paths(get_option('datadir'), 'glib-2.0/schemas')
