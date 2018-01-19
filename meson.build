@@ -7,6 +7,19 @@ i18n = import('i18n')
 gnome = import('gnome')
 
 # build
+add_project_arguments(['--vapidir', join_paths(meson.current_source_dir(), 'vapi')], language: 'vala')
+add_global_arguments('-DGETTEXT_PACKAGE="com.github.kmal-kenneth.monilet"', language:'c')
+
+conf = configuration_data()
+conf.set_quoted('GETTEXT_PACKAGE', meson.project_name())
+configure_file(output: 'config.h', configuration: conf)
+config_h_dir = include_directories('.')
+
+c_args = [
+  '-include', 'config.h',
+  '-DGWEATHER_I_KNOW_THIS_IS_UNSTABLE',
+]
+
 sources = [
   'src/Application.vala',
   'src/MainWindow.vala',
@@ -16,9 +29,6 @@ sources = [
   'src/Services/Memory.vala',
   'src/Utils/UtilsWidget.vala',
 ]
-
-add_project_arguments(['--vapidir', join_paths(meson.current_source_dir(), 'vapi')], language: 'vala')
-add_global_arguments('-DGETTEXT_PACKAGE="com.github.kmal-kenneth.monilet"', language:'c')
 
 deps = [
   dependency('gtk+-3.0'),
