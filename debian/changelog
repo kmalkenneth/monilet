@@ -1,3 +1,11 @@
+com.github.kmal-kenneth.monilet (0.1.5) precise; urgency=low
+
+  * Add icons.
+  * Delete icon of dock.
+  * Delete close button.
+
+ -- Kenet Mauricio Acuña Lago <kmal.kenneth@live.com>  Thu, 12 Jan 2018 15:49:00 -0500
+
 com.github.kmal-kenneth.monilet (0.2) precise; urgency=low
 
   * Public Release.
