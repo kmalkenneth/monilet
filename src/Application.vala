@@ -52,7 +52,7 @@ namespace monilet {
             add_accelerator ("<Control>q", "app.quit", null);
     
             var provider = new Gtk.CssProvider ();
-            provider.load_from_resource ("com/github/kmal-kenneth/monilet/Application.css");
+            provider.load_from_resource ("com/github/kmal-kenneth/monilet/css/style.css");
             Gtk.StyleContext.add_provider_for_screen (Gdk.Screen.get_default (), provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
     
             quit_action.activate.connect (() => {
