@@ -86,7 +86,6 @@
   # Set compilation options
   OPTIONS
      --vapidir=${CMAKE_CURRENT_SOURCE_DIR}/vapi/
-     --debug
   )
   
   # install our .gresource.xml file to access our resources

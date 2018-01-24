@@ -21,10 +21,14 @@
 
 namespace monilet {
 
-    public class Monilet : Gtk.Application {
+    public class Monilet : Granite.Application {
         public Monilet () {
             Object (application_id: "com.github.kmal-kenneth.monilet",
             flags: ApplicationFlags.FLAGS_NONE);
+            
+            program_name = "Monilet";
+            Granite.Services.Logger.initialize (this.program_name);
+            Granite.Services.Logger.DisplayLevel = Granite.Services.LogLevel.DEBUG;
         }
     
         protected override void activate () {

@@ -23,21 +23,20 @@ using Gtk;
 
 namespace monilet {
 
-    public class MainWindow : Gtk.ApplicationWindow {
-        private WidgetCpu widget_cpu;
-        private WidgetMemory widget_memory;
-        private CPU cpu;
-        private Memory memory;
+    public class MainWindow : Gtk.Dialog {
+        WidgetCpu widget_cpu;
+        WidgetMemory widget_memory;
+        CPU cpu;
+        Memory memory;
 
         public MainWindow (Gtk.Application app) {
             Object (application: app,
                     icon_name: "com.github.kmal-kenneth.monilet",
                     resizable: false,
                     title: _("Monilet"),
-                    height_request: 272,
-                    width_request: 500,
-                    skip_taskbar_hint : true);
-            
+                    height_request: 200,
+                    width_request: 512);
+
             widget_cpu.cores = cpu.quantity_cores;
             update ();
         }
@@ -53,9 +52,7 @@ namespace monilet {
             widget_memory = new WidgetMemory ();
             
             var grid = new Gtk.Grid ();
-            grid.column_spacing = 12;
-            grid.margin_top = 12;
-            grid.margin_bottom = 6;
+            grid.margin_bottom = 8;
             grid.margin_end = 18;
             grid.margin_start = 18;
             
@@ -69,16 +66,10 @@ namespace monilet {
             grid.attach (spinner, 1, 0, 1, 1);
             grid.attach (widget_memory, 2, 0, 1, 1);
             
-            var content_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
+            var content_box = get_content_area () as Gtk.Box;
             content_box.border_width = 0;
             content_box.add (grid);
             content_box.show_all ();
-            
-            add (content_box);
-            
-            // setup header bar
-            var header = new Gtk.HeaderBar ();
-            this.set_titlebar (header);
             
             button_press_event.connect ((e) => {
                 if (e.button == Gdk.BUTTON_PRIMARY) {

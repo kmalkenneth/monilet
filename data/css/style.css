@@ -18,8 +18,10 @@
 */
 
 @define-color colorPrimary rgb(41, 43, 55);
+@define-color textColorPrimary rgb(41, 43, 55);
 @define-color bg_highlight_color shade (@colorPrimary, 1.4);
 
+.titlebar,
 .background {
     background-color: @colorPrimary;
     color: #fff;

@@ -5,19 +5,19 @@ using Math;
 namespace monilet {
 
     public class WidgetMemory : Gtk.Bin {
-        private int line_width = 6;
-        private int radius_pad = 64;
+        int line_width = 6;
+        int radius_pad = 64;
         
-        private Layout layout_porcentage;
-        private Layout layout_name;
-        private FontDescription description_porcentage;
-        private FontDescription description_name;
+        Layout layout_porcentage;
+        Layout layout_name;
+        FontDescription description_porcentage;
+        FontDescription description_name;
         
-        private UtilsWidget util;
+        UtilsWidget util;
         
         public  float used { get; set; default = 0;}
         public  float total { get; set; default = 0;}
-        private  int _progress = 0;
+        int _progress = 0;
         public int progress {
             get { return _progress;}
             set { 

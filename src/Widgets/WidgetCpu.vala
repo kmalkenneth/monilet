@@ -20,7 +20,6 @@ namespace monilet {
         public int progress {
             get { return _progress;}
             set { 
-                //stdout.printf("value %.2f \n", value);
                 if (value < 0){
                     _progress = 0;                
                 } else if (value > 100) {
@@ -28,6 +27,7 @@ namespace monilet {
                 } else {
                     _progress = value;                
                 }
+                debug ("CPU: %.2f", _progress);
                 queue_draw (); 
             }
         }
