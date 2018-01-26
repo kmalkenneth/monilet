@@ -14,14 +14,14 @@ com.github.kmal-kenneth.monilet (0.1.5) precise; urgency=low
 
  -- Kenet Mauricio Acuña Lago <kmal.kenneth@live.com>  Thu, 12 Jan 2018 15:49:00 -0500
 
-com.github.kmal-kenneth.monilet (0.2) precise; urgency=low
+com.github.kmal-kenneth.monilet (0.1.1) precise; urgency=low
 
   * Public Release.
 
- -- Kenet Mauricio Acuña Lago <kmal.kenneth@live.com>  Thu, 12 Jan 2018 15:49:00 -0500
+ --- Kenet Mauricio Acuña Lago <kmal.kenneth@live.com>  Thu, 12 Jan 2018 15:49:00 -0500
 
-com.github.kmal-kenneth.monilet (0.1) precise; urgency=low
+com.github.kmal-kenneth.monilet (0.1.0) precise; urgency=low
 
   * Initial Release.
-
+  
  -- Kenet Mauricio Acuña Lago <kmal.kenneth@live.com>  Thu, 9 Jan 2018 15:49:00 -0500

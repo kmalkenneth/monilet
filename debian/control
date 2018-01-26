@@ -11,9 +11,9 @@ Build-Depends: cmake (>= 2.8),
                libgranite-dev,
                libcairo2-dev,
                valac-0.26 | valac (>= 0.26)
-Standards-Version: 3.9.3
+Standards-Version: 0.1.8
 
 Package: com.github.kmal-kenneth.monilet
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends}
-Description: It's a system monitor applet.
+            Description: It's a system monitor widget.

@@ -1,12 +1,12 @@
 [Desktop Entry]
 Name=Monilet
-GenericName=A monitor applet.
-Comment=It's a system monitor applet.
+GenericName=A monitor widget.
+Comment=It's a system monitor widget.
 Categories=Utility;
 Exec=com.github.kmal-kenneth.monilet
 Icon=com.github.kmal-kenneth.monilet
 Terminal=false
 Type=Application
-X-GNOME-Gettext-Domain=monitor-applet
-Keywords=Monitor;Applet;
+X-GNOME-Gettext-Domain=monitor-widget
+Keywords=Monitor;widget;
 X-GNOME-UsesNotifications=true

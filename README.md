@@ -19,9 +19,9 @@ You'll need the following dependencies to build:
 * cmake
 * valac
 
-You'll need the following dependencies to run:
+To install the dependencies. Adjust the command for your repository versions.
 
-* gtop2
+	sudo apt install libgtk-3-dev libcairo2-dev libglib2.0-dev libgtop2-dev libgranite-dev cmake valac
 
 Run `cmake -DCMAKE_INSTALL_PREFIX=/usr ../` to configure the build environment and run `make` to build.
 	
@@ -33,3 +33,6 @@ To install, use `make install`, then execute with `com.github.kmal-kenneth.monil
     sudo make install
     com.github.kmal-kenneth.monilet
 
+To uninstall, use `make uninstall`.
+
+    sudo make uninstall
