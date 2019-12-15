@@ -1,3 +1,9 @@
+com.github.kmal-kenneth.monilet (0.2.0) precise; urgency=high
+
+  * Arriving in Juno.
+
+ -- Kenet Mauricio Acuña Lago <kmal.kenneth@live.com>  Sat, 214 Dec 2018 21:16:00 -000
+
 com.github.kmal-kenneth.monilet (0.1.8) precise; urgency=low
 
   * Now it is not minimized by pressing the icon in the dock.

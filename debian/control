@@ -11,9 +11,9 @@ Build-Depends: meson,
                libgranite-dev,
                libcairo2-dev,
                valac-0.26 | valac (>= 0.26)
-Standards-Version: 0.1.8
+Standards-Version: 0.2.0
 
 Package: com.github.kmal-kenneth.monilet
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends}
-            Description: It's a system monitor widget.
+Description: It's a system monitor widget.

@@ -1,7 +1,8 @@
 
-project('com.github.kmal-kenneth.monilet', 'vala', 'c', version: '0.1.8')
+project('com.github.kmal-kenneth.monilet', 'vala', 'c', version: '0.2.0')
 
 gnome = import('gnome')
+# Include the translations module
 i18n = import('i18n')
 
 conf = configuration_data()
@@ -20,10 +21,14 @@ asresources = gnome.compile_resources(
     c_name: 'as'
 )
 
+# Set our translation domain
+add_global_arguments('-DGETTEXT_PACKAGE="@0@"'.format (meson.project_name()), language:'c')
+
 executable(
     meson.project_name(),
     asresources,
     'src/Application.vala',
+    'src/AppSettings.vala',
     'src/MainWindow.vala',
     'src/Widgets/WidgetCpu.vala',
     'src/Widgets/WidgetMemory.vala',

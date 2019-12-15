@@ -1,22 +1,22 @@
-/*
-* Copyright (c) 2017-2017 kaml-kenneth (https://github.com/kmal-kenneth)
+/*  
+*   Copyright (c) 2017-2019 kmal-kenneth (https://github.com/kmal-kenneth)
 *
-* This program is free software; you can redistribute it and/or
-* modify it under the terms of the GNU General Public
-* License as published by the Free Software Foundation; either
-* version 2 of the License, or (at your option) any later version.
+*   This file is part of Monilet.
 *
-* This program is distributed in the hope that it will be useful,
-* but WITHOUT ANY WARRANTY; without even the implied warranty of
-* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-* General Public License for more details.
+*   Monilet is free software: you can redistribute it and/or modify
+*   it under the terms of the GNU General Public License as published by
+*   the Free Software Foundation, either version 3 of the License, or
+*   (at your option) any later version.
 *
-* You should have received a copy of the GNU General Public
-* License along with this program; if not, write to the
-* Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
-* Boston, MA 02110-1301 USA
+*   Monilet is distributed in the hope that it will be useful,
+*   but WITHOUT ANY WARRANTY; without even the implied warranty of
+*   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+*   GNU General Public License for more details.
 *
-* Authored by: Kenet Mauricio Acuña Lago <kmal.kenneth@live.com>
+*   You should have received a copy of the GNU General Public License
+*   along with Monilet.  If not, see <https://www.gnu.org/licenses/>.  
+*
+*   Authored by: Kenet Mauricio Acuña Lago <kmal.kenneth@live.com>
 */
 
 using Gtk;
@@ -24,11 +24,16 @@ using Gtk;
 namespace monilet {
 
     public class MainWindow : Gtk.Dialog {
+        
+        //Wigets
         WidgetCpu widget_cpu;
         WidgetMemory widget_memory;
+
+        //monitoring services
         CPU cpu;
         Memory memory;
 
+        //construct
         public MainWindow (Gtk.Application app) {
             Object (application: app,
                     icon_name: "com.github.kmal-kenneth.monilet",
@@ -41,6 +46,7 @@ namespace monilet {
             update ();
         }
         
+        //create ui
         construct {
             get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
             set_keep_below (true);
@@ -71,6 +77,7 @@ namespace monilet {
             content_box.add (grid);
             content_box.show_all ();
             
+            //drag the window
             button_press_event.connect ((e) => {
                 if (e.button == Gdk.BUTTON_PRIMARY) {
                     begin_move_drag ((int) e.button, (int) e.x_root, (int) e.y_root, e.time);
@@ -78,8 +85,26 @@ namespace monilet {
                 }
                 return false;
             });
+
+            //Settings app
+            var settings = AppSettings.get_default ();
+
+            int x = settings.window_x;
+            int y = settings.window_y;
+
+            if (x != -1 && y != -1) {
+                move (x, y);
+            }
+
+            Unix.signal_add (Posix.Signal.INT, signal_source_func, Priority.HIGH);
+            Unix.signal_add (Posix.Signal.TERM, signal_source_func, Priority.HIGH);
+
+            var provider = new Gtk.CssProvider ();
+            provider.load_from_resource ("com/github/kmal-kenneth/monilet/css/style.css");
+            Gtk.StyleContext.add_provider_for_screen (Gdk.Screen.get_default (), provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
         }
         
+        //update the services
         private void update () {
     	    Timeout.add_seconds (1, () => {
     	        widget_cpu.progress = cpu.percentage_used;
@@ -88,7 +113,33 @@ namespace monilet {
     	        widget_memory.total = memory.total;
                return true;
            });
-    	}
+        }
+        
+        //Save state of app
+        private bool request_quit () {
+            int x, y;
+            get_position (out x, out y);
+    
+            var settings = AppSettings.get_default ();
+            settings.window_x = x;
+            settings.window_y = y;
+        
+            return false;
+        }
+
+        //delete the window
+        public override bool delete_event (Gdk.EventAny event) {
+            return request_quit ();
+        }
+    
+        //Signal for close window
+        private bool signal_source_func () {
+            if (!request_quit ()) {
+                destroy ();
+            }
+    
+            return true;
+        }
 
     }
 }

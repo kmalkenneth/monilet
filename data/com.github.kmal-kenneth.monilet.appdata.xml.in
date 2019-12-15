@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2018 Kenet Mauricio Acuña Lago <kmal.kenneth@live.com> -->
+<!-- Copyright 2019 Kenet Mauricio Acuña Lago <kmal.kenneth@live.com> -->
 <component type="desktop-application">
     <id>com.github.kmal-kenneth.monilet.desktop</id>
     <metadata_license>CC0-1.0</metadata_license>
@@ -30,6 +30,11 @@
         <value key="x-appcenter-color-primary-text">#DCDFE4</value>
     </custom>
     <releases>
+        <release version="0.2.0" date="2019-12-14">
+          <description>
+            <p>Release: Arriving in Juno.</p>
+          </description>
+        </release>
         <release version="0.1.8" date="2018-01-25">
           <description>
             <p>Release: Fixed of the capacity of minimization and form.</p>

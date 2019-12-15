@@ -1,3 +1,9 @@
+com.github.kmal-kenneth.monilet (0.1.8ubuntu1) UNRELEASED; urgency=medium
+
+  *
+
+ -- Kenet Mauricio Acuña Lago <kenma@kenma-desktop>  Sat, 14 Dec 2019 21:44:55 -0600
+
 com.github.kmal-kenneth.monilet (0.1.8) precise; urgency=low
 
   * Now it is not minimized by pressing the icon in the dock.
