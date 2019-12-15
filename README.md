@@ -1,13 +1,15 @@
 # Monilet
-[![Get it on AppCenter](https://appcenter.elementary.io/badge.svg)](https://appcenter.elementary.io/com.github.kmal-kenneth.monilet) 
+[![Get it on AppCenter](https://appcenter.elementary.io/badge.svg)](https://appcenter.elementary.io/com.github.kmal-kenneth.monilet)
 
 [![Full Code](https://raw.github.com/kmal-kenneth/monilet/master/data/images/badge.png)](https://gitlab.com/kmal-kenneth/monilet)
 
-See percentage of use your CPU and number of cores. Also percentage used memory, amount of memory used and total memory.
-
 ![Monilet Screenshot](https://raw.github.com/kmal-kenneth/monilet/master/data/images/screenshot.png)
 
-## Building and Installation
+See percentage of use your CPU and number of cores. Also percentage used memory, amount of memory used and total memory.
+
+## Installation
+
+### Dependencies
 
 You'll need the following dependencies to build:
 
@@ -16,23 +18,28 @@ You'll need the following dependencies to build:
 * libglib2.0-dev
 * libgtop2-dev
 * libgranite-dev
-* cmake
+* meson
 * valac
 
 To install the dependencies. Adjust the command for your repository versions.
 
-	sudo apt install libgtk-3-dev libcairo2-dev libglib2.0-dev libgtop2-dev libgranite-dev cmake valac
+```bash
+sudo apt install libgtk-3-dev libcairo2-dev libglib2.0-dev libgtop2-dev libgranite-dev valac
+```
 
-Run `cmake -DCMAKE_INSTALL_PREFIX=/usr ../` to configure the build environment and run `make` to build.
-	
-    cmake -DCMAKE_INSTALL_PREFIX=/usr ../
-    make
+### Building
 
-To install, use `make install`, then execute with `com.github.kmal-kenneth.monilet`.
+```bash
+meson build --prefix=/usr
+cd build
+ninja
+```
 
-    sudo make install
-    com.github.kmal-kenneth.monilet
+### Installing & executing
 
-To uninstall, use `make uninstall`.
+To install, use `ninja install`, then execute with `com.github.kmal-kenneth.monilet`.
 
-    sudo make uninstall
+```bash
+sudo ninja install
+com.github.kmal-kenneth.monilet
+```
