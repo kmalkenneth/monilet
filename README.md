@@ -22,7 +22,9 @@
   <img alt="Maintenance" src="https://img.shields.io/maintenance/yes/2020">
 </p>
 
-![Monilet Screenshot](https://raw.github.com/kmal-kenneth/monilet/master/data/images/screenshot.png)
+<p align="center">
+    <img alt="Monilet Screenshot" src="https://raw.github.com/kmal-kenneth/monilet/master/data/images/screenshot.png">
+</p>
 
 See percentage of use your CPU and number of cores. Also percentage used memory, amount of memory used and total memory.
 
