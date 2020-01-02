@@ -1,30 +1,26 @@
-# Monilet 
+<p align="center">
+    <img align="left" width="64" height="64" src="data/images/icons/64/com.github.kmal-kenneth.monilet.svg">
+    <h1 class="rich-diff-level-zero">Monilet</h1>
+</p>
 
-[![Full Code](https://raw.github.com/kmal-kenneth/monilet/master/data/images/badge.png)](https://gitlab.com/kmal-kenneth/monilet)
+<p align="right">
+  <a href="https://appcenter.elementary.io/com.github.kmal-kenneth.monilet"><img src="https://appcenter.elementary.io/badge.svg" alt="Get it on AppCenter"></a>
+  <a href="https://gitlab.com/kmal-kenneth/monilet"><img src="https://raw.github.com/kmal-kenneth/monilet/master/data/images/badge.png" alt="Full Code"></a>
+</p>
 
-[![Get it on AppCenter](https://appcenter.elementary.io/badge.svg)](https://appcenter.elementary.io/com.github.kmal-kenneth.monilet)﻿
-
-![Travis (.com)](https://img.shields.io/travis/com/kmal-kenneth/monilet)
-
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/kmal-kenneth/monilet)
-
-![GitHub](https://img.shields.io/github/license/kmal-kenneth/monilet)
-
-![GitHub language count](https://img.shields.io/github/languages/count/kmal-kenneth/monilet)
-
-![GitHub top language](https://img.shields.io/github/languages/top/kmal-kenneth/monilet)
-
-![GitHub issues](https://img.shields.io/github/issues/kmal-kenneth/monilet)
-
-![GitHub All Releases](https://img.shields.io/github/downloads/kmal-kenneth/monilet/total)
-
-![GitHub repo size](https://img.shields.io/github/repo-size/kmal-kenneth/monilet)
-
-![GitHub last commit](https://img.shields.io/github/last-commit/kmal-kenneth/monilet)
-
-![GitHub Release Date](https://img.shields.io/github/release-date/kmal-kenneth/monilet)
-
-![Maintenance](https://img.shields.io/maintenance/yes/2020)
+<p align="center">
+  <img alt="Travis (.com)" src="https://img.shields.io/travis/com/kmal-kenneth/monilet">
+  <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/kmal-kenneth/monilet">
+  <img alt="GitHub" src="https://img.shields.io/github/license/kmal-kenneth/monilet">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/kmal-kenneth/monilet">
+  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/kmal-kenneth/monilet">
+  <img alt="GitHub issues" src="https://img.shields.io/github/issues/kmal-kenneth/monilet">
+  <img alt="GitHub All Releases" src="https://img.shields.io/github/downloads/kmal-kenneth/monilet/total">
+  <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/kmal-kenneth/monilet">
+  <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/kmal-kenneth/monilet">
+  <img alt="GitHub Release Date" src="https://img.shields.io/github/release-date/kmal-kenneth/monilet">
+  <img alt="Maintenance" src="https://img.shields.io/maintenance/yes/2020">
+</p>
 
 ![Monilet Screenshot](https://raw.github.com/kmal-kenneth/monilet/master/data/images/screenshot.png)
 
