@@ -1,7 +1,30 @@
-# Monilet
-[![Get it on AppCenter](https://appcenter.elementary.io/badge.svg)](https://appcenter.elementary.io/com.github.kmal-kenneth.monilet)
+# Monilet 
 
 [![Full Code](https://raw.github.com/kmal-kenneth/monilet/master/data/images/badge.png)](https://gitlab.com/kmal-kenneth/monilet)
+
+[![Get it on AppCenter](https://appcenter.elementary.io/badge.svg)](https://appcenter.elementary.io/com.github.kmal-kenneth.monilet)﻿
+
+![Travis (.com)](https://img.shields.io/travis/com/kmal-kenneth/monilet)
+
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/kmal-kenneth/monilet)
+
+![GitHub](https://img.shields.io/github/license/kmal-kenneth/monilet)
+
+![GitHub language count](https://img.shields.io/github/languages/count/kmal-kenneth/monilet)
+
+![GitHub top language](https://img.shields.io/github/languages/top/kmal-kenneth/monilet)
+
+![GitHub issues](https://img.shields.io/github/issues/kmal-kenneth/monilet)
+
+![GitHub All Releases](https://img.shields.io/github/downloads/kmal-kenneth/monilet/total)
+
+![GitHub repo size](https://img.shields.io/github/repo-size/kmal-kenneth/monilet)
+
+![GitHub last commit](https://img.shields.io/github/last-commit/kmal-kenneth/monilet)
+
+![GitHub Release Date](https://img.shields.io/github/release-date/kmal-kenneth/monilet)
+
+![Maintenance](https://img.shields.io/maintenance/yes/2020)
 
 ![Monilet Screenshot](https://raw.github.com/kmal-kenneth/monilet/master/data/images/screenshot.png)
 
