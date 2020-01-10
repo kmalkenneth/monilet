@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.kmal-kenneth.monilet\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-14 22:14-0600\n"
+"POT-Creation-Date: 2020-01-10 15:16+0100\n"
 "PO-Revision-Date: 2019-12-20 17:08+0100\n"
 "Last-Translator: Michał Nowakowski <nowakowski@offshore.rocks>\n"
 "Language-Team:\n"
@@ -16,88 +16,10 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/MainWindow.vala:41 data/com.github.kmal-kenneth.monilet.desktop.in:3
-#: data/com.github.kmal-kenneth.monilet.appdata.xml.in:7
+#: src/MainWindow.vala:41
 msgid "Monilet"
 msgstr "Monilet"
 
 #: src/Widgets/WidgetMemory.vala:160
 msgid "GiB"
 msgstr "GiB"
-
-#: data/com.github.kmal-kenneth.monilet.desktop.in:4
-#: data/com.github.kmal-kenneth.monilet.appdata.xml.in:8
-msgid "A monitor widget."
-msgstr "Widżet do monitorowania."
-
-#: data/com.github.kmal-kenneth.monilet.desktop.in:5
-msgid "It's a system monitor widget."
-msgstr "Widżet do monitorowania systemu."
-
-#: data/com.github.kmal-kenneth.monilet.desktop.in:8
-msgid "com.github.kmal-kenneth.monilet"
-msgstr "com.github.kmal-kenneth.monilet"
-
-#: data/com.github.kmal-kenneth.monilet.desktop.in:12
-msgid "Monitor;widget;"
-msgstr "Monitor;Widżet"
-
-#: data/com.github.kmal-kenneth.monilet.appdata.xml.in:10
-msgid ""
-"See percentage of use your CPU and number of cores. Also percentage used "
-"memory, amount of memory used and total memory."
-msgstr ""
-"Zobacz procentowe użycie procesora i ilość używanych rdzeni, a także "
-"procent użycia pamięci, ilość użytej i dostępnej pamięci."
-
-#: data/com.github.kmal-kenneth.monilet.appdata.xml.in:12
-msgid "Stays out of your way by always sticking to the desktop"
-msgstr "Nie przeszkadza, bo zawsze przykleja się do pulpitu"
-
-#: data/com.github.kmal-kenneth.monilet.appdata.xml.in:13
-msgid "Move the window by dragging any part of it"
-msgstr "Przenieś okno za dowolną jego część"
-
-#: data/com.github.kmal-kenneth.monilet.appdata.xml.in:14
-msgid "Quit with the handy shortcut Ctrl + Q"
-msgstr "Zamknij apkę wygodnym skrótem Ctrl + Q"
-
-#: data/com.github.kmal-kenneth.monilet.appdata.xml.in:25
-msgid "Kenet Acuña"
-msgstr "Kenet Acuñ"
-
-#: data/com.github.kmal-kenneth.monilet.appdata.xml.in:35
-msgid "Release: Arriving in Juno."
-msgstr "Wydanie: Przybycie do Juno"
-
-#: data/com.github.kmal-kenneth.monilet.appdata.xml.in:40
-msgid "Release: Fixed of the capacity of minimization and form."
-msgstr "Wydanie: Poprawiono minimalizację i formę."
-
-#: data/com.github.kmal-kenneth.monilet.appdata.xml.in:42
-msgid "Now it is not minimized by pressing the icon in the dock."
-msgstr "Od teraz nie minimalizuje się po kliknięciu ikony w doku."
-
-#: data/com.github.kmal-kenneth.monilet.appdata.xml.in:43
-msgid "Again it shows the rounded edges."
-msgstr "Znów pokazuje zaokrąglone rogi."
-
-#: data/com.github.kmal-kenneth.monilet.appdata.xml.in:44
-msgid "The close button is present again but the color of the widget."
-msgstr "Przycisk zamykania jest znów obecny, ale w kolorze widżetu."
-
-#: data/com.github.kmal-kenneth.monilet.appdata.xml.in:50
-msgid "Release: Add icons, hide the base icon and remove the close button."
-msgstr "Wydanie: Dodano ikony, ukryto bazową ikonę i usunięto przycisk zamykania."
-
-#: data/com.github.kmal-kenneth.monilet.appdata.xml.in:52
-msgid "Added icons in different sizes (128, 64, 48, 32)"
-msgstr "Dodano ikony w innych rozmiarach (128, 64, 48, 32)"
-
-#: data/com.github.kmal-kenneth.monilet.appdata.xml.in:53
-msgid "It is no longer shown in the dock"
-msgstr "Nie pojawia się już w doku"
-
-#: data/com.github.kmal-kenneth.monilet.appdata.xml.in:54
-msgid "The close button was removed"
-msgstr "Przycisk zamykania został usunięty"

@@ -25,6 +25,6 @@
 .background {
     background-color: @colorPrimary;
     color: #fff;
-    icon-shadow: 0 1px 1px shade (@colorPrimary, 0.82);
+    -gtk-icon-shadow: 0 1px 1px shade (@colorPrimary, 0.82);
     text-shadow: 0 1px 1px shade (@colorPrimary, 0.82);
 }
