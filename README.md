@@ -1,5 +1,5 @@
 <p align="center">
-    <img align="left" width="64" height="64" src="data/images/icons/64/com.github.kmal-kenneth.monilet.svg">
+    <img align="left" width="64" height="64" src="data/icons/64/com.github.kmal-kenneth.monilet.svg">
     <h1 class="rich-diff-level-zero">Monilet</h1>
 </p>
 
