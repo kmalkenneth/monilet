@@ -1,5 +1,5 @@
 /*  
-*   Copyright (c) 2017-2019 kmal-kenneth (https://github.com/kmal-kenneth)
+*   Copyright (c) 2017-2020 kmal-kenneth (https://github.com/kmal-kenneth)
 *
 *   This file is part of Monilet.
 *
@@ -19,12 +19,12 @@
 *   Authored by: Kenet Mauricio Acuña Lago <kmal.kenneth@live.com>
 */
 
-namespace monilet {
-    public class Memory  : GLib.Object {        
+namespace Monilet {
+    public class Memory : GLib.Object {
         private int _percentage_used;
         private float _total;
         private float _used;
-        
+
         public int percentage_used {
             get { update_percentage_used (); return _percentage_used; }
         }
@@ -35,26 +35,26 @@ namespace monilet {
             get { update_used (); return _used; }
         }
 
-        public Memory (){
+        public Memory () {
             this._percentage_used = 0;
             this._used = 0;
             this._total = 0;
         }
-        
-        private void update_percentage_used (){
-            _percentage_used = (int) Math.round((used / total) * 100);
+
+        private void update_percentage_used () {
+            _percentage_used = (int) Math.round ((used / total) * 100);
         }
-        
-        private void update_total (){
+
+        private void update_total () {
             GTop.Memory memory;
             GTop.get_mem (out memory);
-            _total = (((float) memory.total / 1024) /1024) / 1024;
+            _total = (((float) memory.total / 1024) / 1024) / 1024;
         }
-        
-        private void update_used (){
+
+        private void update_used () {
             GTop.Memory memory;
             GTop.get_mem (out memory);
-            _used = (((float) memory.user / 1024) /1024) / 1024;
+            _used = (((float) memory.user / 1024) / 1024) / 1024;
         }
     }
 }

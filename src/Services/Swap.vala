@@ -1,5 +1,5 @@
 /*  
-*   Copyright (c) 2017-2019 kmal-kenneth (https://github.com/kmal-kenneth)
+*   Copyright (c) 2017-2020 kmal-kenneth (https://github.com/kmal-kenneth)
 *
 *   This file is part of Monilet.
 *
@@ -19,12 +19,12 @@
 *   Authored by: Kenet Mauricio Acuña Lago <kmal.kenneth@live.com>
 */
 
-namespace monitor {
-    public class Swap  : GLib.Object {
+namespace Monitor {
+    public class Swap : GLib.Object {
         private float _percentage_used;
         private float _total;
         private float _used;
-        
+
         public float percentage_used {
             get { update_percentage_used (); return _percentage_used; }
         }
@@ -35,26 +35,26 @@ namespace monitor {
             get { update_used (); return _used; }
         }
 
-        public Swap (){
+        public Swap () {
             this._percentage_used = 0;
             this._used = 0;
             this._total = 0;
         }
-        
-        private void update_percentage_used (){
+
+        private void update_percentage_used () {
             _percentage_used = ((used / total) * 100);
         }
-        
-        private void update_total (){
+
+        private void update_total () {
             GTop.Swap swap;
             GTop.get_swap (out swap);
-            _total = (((float) swap.total / 1024) /1024) / 1024;
+            _total = (((float) swap.total / 1024) / 1024) / 1024;
         }
-        
-        private void update_used (){
+
+        private void update_used () {
             GTop.Swap swap;
             GTop.get_swap (out swap);
-            _used = (((float) swap.used / 1024) /1024) / 1024;
-        }  
+            _used = (((float) swap.used / 1024) / 1024) / 1024;
+        }
     }
 }

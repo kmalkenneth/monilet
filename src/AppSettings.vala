@@ -1,5 +1,5 @@
 /*  
-*   Copyright (c) 2017-2019 kmal-kenneth (https://github.com/kmal-kenneth)
+*   Copyright (c) 2017-2020 kmal-kenneth (https://github.com/kmal-kenneth)
 *
 *   This file is part of Monilet.
 *
@@ -19,28 +19,27 @@
 *   Authored by: Kenet Mauricio Acuña Lago <kmal.kenneth@live.com>
 */
 
-namespace monilet {
+namespace Monilet {
 
     public class AppSettings : Granite.Services.Settings {
 
         // Position
         public int window_x { get; set; }
         public int window_y { get; set; }
-        
+
         // Singleton
         private static AppSettings? instance;
         public static unowned AppSettings get_default () {
             if (instance == null) {
                 instance = new AppSettings ();
             }
-            
+
             return instance;
         }
-        
+
         //Constructor
         private AppSettings () {
             base ("com.github.kmal-kenneth.monilet");
         }
     }
-    
 }
