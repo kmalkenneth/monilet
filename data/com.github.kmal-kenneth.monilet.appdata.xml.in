@@ -18,6 +18,11 @@
     <binary>com.github.kmal-kenneth.monilet</binary>
   </provides>
   <releases>
+    <release version="0.2.1" date="2020-01-10">
+      <description>
+        <p>Release: Add Polish to the supported languages.</p>
+      </description>
+    </release>
     <release version="0.2.0" date="2019-12-14">
       <description>
         <p>Release: Arriving in Juno.</p>
