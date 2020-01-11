@@ -38,7 +38,7 @@ msgstr "com.github.kmal-kenneth.monilet"
 
 #: data/com.github.kmal-kenneth.monilet.desktop.in:12
 msgid "Monitor;widget;"
-msgstr "Monitor;Widżet"
+msgstr "Monitor;Widżet;"
 
 #: data/com.github.kmal-kenneth.monilet.appdata.xml.in:10
 msgid ""
