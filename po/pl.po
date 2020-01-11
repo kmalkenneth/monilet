@@ -18,8 +18,8 @@ msgstr ""
 
 #: src/MainWindow.vala:41
 msgid "Monilet"
-msgstr "Monilet"
+msgstr ""
 
 #: src/Widgets/WidgetMemory.vala:160
 msgid "GiB"
-msgstr "GiB"
+msgstr ""
