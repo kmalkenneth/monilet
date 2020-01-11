@@ -1,4 +1,3 @@
-
 sources = files(
     'Application.vala',
     'AppSettings.vala',
@@ -7,5 +6,5 @@ sources = files(
     'Widgets/WidgetMemory.vala',
     'Services/CPU.vala',
     'Services/Memory.vala',
-    'Utils/UtilsWidget.vala',
+    'Utils/UtilsWidget.vala'
 )
