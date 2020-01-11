@@ -21,7 +21,7 @@
 
 namespace monilet {
 
-    public class Monilet : Granite.Application {
+    public class Monilet : Gtk.Application {
 
         // Main Window
         private MainWindow? app_window = null;
@@ -31,11 +31,6 @@ namespace monilet {
             //Base
             Object (application_id: "com.github.kmal-kenneth.monilet",
             flags: ApplicationFlags.FLAGS_NONE);
-            
-            //Config app
-            program_name = "Monilet";
-            Granite.Services.Logger.initialize (this.program_name);
-            Granite.Services.Logger.DisplayLevel = Granite.Services.LogLevel.DEBUG;
         }
         
         //Active App
