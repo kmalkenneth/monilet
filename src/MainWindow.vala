@@ -1,5 +1,5 @@
 /*  
-*   Copyright (c) 2017-2019 kmal-kenneth (https://github.com/kmal-kenneth)
+*   Copyright (c) 2017-2020 kmal-kenneth (https://github.com/kmal-kenneth)
 *
 *   This file is part of Monilet.
 *
@@ -21,10 +21,10 @@
 
 using Gtk;
 
-namespace monilet {
+namespace Monilet {
 
     public class MainWindow : Gtk.Dialog {
-        
+
         //Wigets
         WidgetCpu widget_cpu;
         WidgetMemory widget_memory;
@@ -45,38 +45,38 @@ namespace monilet {
             widget_cpu.cores = cpu.quantity_cores;
             update ();
         }
-        
+
         //create ui
         construct {
             get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
             set_keep_below (true);
             stick ();
-            
+
             cpu = new CPU ();
             memory = new Memory ();
             widget_cpu = new WidgetCpu ();
             widget_memory = new WidgetMemory ();
-            
+
             var grid = new Gtk.Grid ();
             grid.margin_bottom = 8;
             grid.margin_end = 18;
             grid.margin_start = 18;
-            
+
             var spinner = new Gtk.Spinner ();
             spinner.active = false;
             spinner.halign = Gtk.Align.CENTER;
             spinner.vexpand = true;
             spinner.hexpand = true;
-            
+
             grid.attach (widget_cpu, 0, 0, 1, 1);
             grid.attach (spinner, 1, 0, 1, 1);
             grid.attach (widget_memory, 2, 0, 1, 1);
-            
+
             var content_box = get_content_area () as Gtk.Box;
             content_box.border_width = 0;
             content_box.add (grid);
             content_box.show_all ();
-            
+
             //drag the window
             button_press_event.connect ((e) => {
                 if (e.button == Gdk.BUTTON_PRIMARY) {
@@ -101,29 +101,31 @@ namespace monilet {
 
             var provider = new Gtk.CssProvider ();
             provider.load_from_resource ("com/github/kmal-kenneth/monilet/css/style.css");
-            Gtk.StyleContext.add_provider_for_screen (Gdk.Screen.get_default (), provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
+            Gtk.StyleContext.add_provider_for_screen (
+                                Gdk.Screen.get_default (),
+                                provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
         }
-        
+
         //update the services
         private void update () {
-    	    Timeout.add_seconds (1, () => {
-    	        widget_cpu.progress = cpu.percentage_used;
-    	        widget_memory.progress = memory.percentage_used;
-    	        widget_memory.used = memory.used;
-    	        widget_memory.total = memory.total;
+            Timeout.add_seconds (1, () => {
+                widget_cpu.progress = cpu.percentage_used;
+                widget_memory.progress = memory.percentage_used;
+                widget_memory.used = memory.used;
+                widget_memory.total = memory.total;
                return true;
            });
         }
-        
+
         //Save state of app
         private bool request_quit () {
             int x, y;
             get_position (out x, out y);
-    
+
             var settings = AppSettings.get_default ();
             settings.window_x = x;
             settings.window_y = y;
-        
+
             return false;
         }
 
@@ -131,16 +133,14 @@ namespace monilet {
         public override bool delete_event (Gdk.EventAny event) {
             return request_quit ();
         }
-    
+
         //Signal for close window
         private bool signal_source_func () {
             if (!request_quit ()) {
                 destroy ();
             }
-    
+
             return true;
         }
-
     }
 }
-

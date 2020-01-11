@@ -1,5 +1,5 @@
 /*  
-*   Copyright (c) 2017-2019 kmal-kenneth (https://github.com/kmal-kenneth)
+*   Copyright (c) 2017-2020 kmal-kenneth (https://github.com/kmal-kenneth)
 *
 *   This file is part of Monilet.
 *
@@ -19,32 +19,32 @@
 *   Authored by: Kenet Mauricio Acuña Lago <kmal.kenneth@live.com>
 */
 
-namespace monitor {
+namespace Monitor {
     public class UnitFormat : Object {
-        public string format_size_values(uint64 value) {
-            if(value >= 1000000000000)
-                return "%.3f TB".printf((double) value / 1000000000000d);
-            else if(value >= 1000000000)
-                return "%.1f GB".printf((double) value / 1000000000d);
-            else if(value >= 1000000)
-                return(value / 1000000).to_string() + " MB";
-            else if(value >= 1000)
-                return (value / 1000).to_string() + " KB";
+        public string format_size_values (uint64 value) {
+            if (value >= 1000000000000)
+                return "%.3f TB".printf ((double) value / 1000000000000d);
+            else if (value >= 1000000000)
+                return "%.1f GB".printf ((double) value / 1000000000d);
+            else if (value >= 1000000)
+                return (value / 1000000).to_string () + " MB";
+            else if (value >= 1000)
+                return (value / 1000).to_string () + " KB";
             else
-                return value.to_string() + " B";
+                return value.to_string () + " B";
         }
 
-        public string format_size_speed_values(uint64 value) {
-            if(value >= 1000000000000)
-                return "%.3f TB/s".printf((double) value / 1000000000000d);
-            else if(value >= 1000000000)
-                return "%.1f GB/s".printf((double) value / 1000000000d);
-            else if(value >= 1000000)
-                return "%.2f MB/s".printf((double) value / 1000000d);
-            else if(value >= 1000)
-                return (value / 1000).to_string() + " KB/s";
+        public string format_size_speed_values (uint64 value) {
+            if (value >= 1000000000000)
+                return "%.3f TB/s".printf ((double) value / 1000000000000d);
+            else if (value >= 1000000000)
+                return "%.1f GB/s".printf ((double) value / 1000000000d);
+            else if (value >= 1000000)
+                return "%.2f MB/s".printf ((double) value / 1000000d);
+            else if (value >= 1000)
+                return (value / 1000).to_string () + " KB/s";
             else
-                return value.to_string() + " B/s";
+                return value.to_string () + " B/s";
         }
     }
 }

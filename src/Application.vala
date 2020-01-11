@@ -1,5 +1,5 @@
 /*  
-*   Copyright (c) 2017-2019 kmal-kenneth (https://github.com/kmal-kenneth)
+*   Copyright (c) 2017-2020 kmal-kenneth (https://github.com/kmal-kenneth)
 *
 *   This file is part of Monilet.
 *
@@ -19,7 +19,7 @@
 *   Authored by: Kenet Mauricio Acuña Lago <kmal.kenneth@live.com>
 */
 
-namespace monilet {
+namespace Monilet {
 
     public class Monilet : Gtk.Application {
 
@@ -32,30 +32,30 @@ namespace monilet {
             Object (application_id: "com.github.kmal-kenneth.monilet",
             flags: ApplicationFlags.FLAGS_NONE);
         }
-        
+
         //Active App
         protected override void activate () {
             if (get_windows ().length () > 0) {
                 get_windows ().data.present ();
                 return;
             }
-            
+
             app_window = new MainWindow (this);
             app_window.show ();
 
             //key action
             var quit_action = new SimpleAction ("quit", null);
-    
+
             add_action (quit_action);
             set_accels_for_action ("app.quit", {"<Control>q"});
-    
+
             quit_action.activate.connect (() => {
                 if (app_window != null) {
                     app_window.close ();
                 }
             });
         }
-    
+
         //Main
         public static int main (string[] args) {
             var app = new Monilet ();
