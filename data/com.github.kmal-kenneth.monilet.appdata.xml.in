@@ -1,59 +1,95 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <!-- Copyright 2019 Kenet Mauricio Acuña Lago <kmal.kenneth@live.com> -->
-<component type="desktop-application">
-    <id>com.github.kmal-kenneth.monilet</id>
-    <metadata_license>CC0-1.0</metadata_license>
-    <project_license>GPL-3.0+</project_license>
-    <name>Monilet</name>
-    <summary>A monitor widget.</summary>
-    <description>
-        <p>See percentage of use your CPU and number of cores. Also percentage used memory, amount of memory used and total memory.</p>
+<component type="desktop">
+  <id>com.github.kmal-kenneth.monilet</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0</project_license>
+  <name>Monilet</name>
+  <summary>A monitor widget.</summary>
+  <description>
+    <p>See percentage of use your CPU and number of cores. Also percentage used memory, amount of memory used and total memory.</p>
+    <ul>
+      <li>Stays out of your way by always sticking to the desktop</li>
+      <li>Move the window by dragging any part of it</li>
+      <li>Quit with the handy shortcut Ctrl + Q</li>
+    </ul>
+  </description>
+  <provides>
+    <binary>com.github.kmal-kenneth.monilet</binary>
+  </provides>
+  <releases>
+    <release version="0.2.1" date="2020-01-10">
+      <description>
+        <p>Release: Add Polish to the supported languages.</p>
+      </description>
+    </release>
+    <release version="0.2.0" date="2019-12-14">
+      <description>
+        <p>Release: Arriving in Juno.</p>
+      </description>
+    </release>
+    <release version="0.1.8" date="2018-01-25">
+      <description>
+        <p>Release: Fixed of the capacity of minimization and form.</p>
         <ul>
-            <li>Stays out of your way by always sticking to the desktop</li>
-            <li>Move the window by dragging any part of it</li>
-            <li>Quit with the handy shortcut Ctrl + Q</li>
+          <li>Now it is not minimized by pressing the icon in the dock.</li>
+          <li>Again it shows the rounded edges.</li>
+          <li>The close button is present again but the color of the widget.</li>
         </ul>
-    </description>
-    <provides>
-        <binary>com.github.kmal-kenneth.monilet</binary>
-    </provides>
-    <screenshots>
-        <screenshot type="default">
-            <image>https://raw.githubusercontent.com/kmal-kenneth/monilet/master/data/screenshot.png</image>
-        </screenshot>
-    </screenshots>
-    <developer_name>Kenet Acuña</developer_name>
-    <url type="homepage">http://github.com/kmal-kenneth</url>
-    <url type="bugtracker">https://github.com/kmal-kenneth/monilet/issues</url>
-    <custom>
-        <value key="x-appcenter-color-primary">#292B37</value>
-        <value key="x-appcenter-color-primary-text">#DCDFE4</value>
-    </custom>
-    <releases>
-        <release version="0.2.0" date="2019-12-14">
-          <description>
-            <p>Release: Arriving in Juno.</p>
-          </description>
-        </release>
-        <release version="0.1.8" date="2018-01-25">
-          <description>
-            <p>Release: Fixed of the capacity of minimization and form.</p>
-            <ul>
-              <li>Now it is not minimized by pressing the icon in the dock.</li>
-              <li>Again it shows the rounded edges.</li>
-              <li>The close button is present again but the color of the widget.</li>
-            </ul>
-          </description>
-        </release>
-        <release version="0.1.5" date="2018-01-16">
-        <description>
-          <p>Release: Add icons, hide the base icon and remove the close button.</p>
-          <ul>
-            <li>Added icons in different sizes (128, 64, 48, 32)</li>
-            <li>It is no longer shown in the dock</li>
-            <li>The close button was removed</li>
-          </ul>
-        </description>
-        </release>
-    </releases>
+      </description>
+    </release>
+    <release version="0.1.5" date="2018-01-16">
+      <description>
+        <p>Release: Add icons, hide the base icon and remove the close button.</p>
+        <ul>
+          <li>Added icons in different sizes (128, 64, 48, 32)</li>
+          <li>It is no longer shown in the dock</li>
+          <li>The close button was removed</li>
+        </ul>
+      </description>
+    </release>
+  </releases>
+  <screenshots>
+    <screenshot type="default">
+      <image>https://raw.githubusercontent.com/kmal-kenneth/monilet/master/data/screenshot.png</image>
+    </screenshot>
+  </screenshots>
+  <content_rating type="oars-1.1">
+    <content_attribute id="violence-cartoon">none</content_attribute>
+    <content_attribute id="violence-fantasy">none</content_attribute>
+    <content_attribute id="violence-realistic">none</content_attribute>
+    <content_attribute id="violence-bloodshed">none</content_attribute>
+    <content_attribute id="violence-sexual">none</content_attribute>
+    <content_attribute id="violence-desecration">none</content_attribute>
+    <content_attribute id="violence-slavery">none</content_attribute>
+    <content_attribute id="violence-worship">none</content_attribute>
+    <content_attribute id="drugs-alcohol">none</content_attribute>
+    <content_attribute id="drugs-narcotics">none</content_attribute>
+    <content_attribute id="drugs-tobacco">none</content_attribute>
+    <content_attribute id="sex-nudity">none</content_attribute>
+    <content_attribute id="sex-themes">none</content_attribute>
+    <content_attribute id="sex-homosexuality">none</content_attribute>
+    <content_attribute id="sex-prostitution">none</content_attribute>
+    <content_attribute id="sex-adultery">none</content_attribute>
+    <content_attribute id="sex-appearance">none</content_attribute>
+    <content_attribute id="language-profanity">none</content_attribute>
+    <content_attribute id="language-humor">none</content_attribute>
+    <content_attribute id="language-discrimination">none</content_attribute>
+    <content_attribute id="social-chat">none</content_attribute>
+    <content_attribute id="social-info">none</content_attribute>
+    <content_attribute id="social-audio">none</content_attribute>
+    <content_attribute id="social-location">none</content_attribute>
+    <content_attribute id="social-contacts">none</content_attribute>
+    <content_attribute id="money-purchasing">none</content_attribute>
+    <content_attribute id="money-gambling">none</content_attribute>
+  </content_rating>
+  <developer_name>Kenet Acuña</developer_name>
+  <url type="homepage">http://github.com/kmal-kenneth</url>
+  <url type="bugtracker">https://github.com/kmal-kenneth/monilet/issues</url>
+  <url type="help">http://github.com/kmal-kenneth/issues</url>
+  <url type="translate">http://github.com/kmal-kenneth</url>
+  <custom>
+    <value key="x-appcenter-color-primary">#292B37</value>
+    <value key="x-appcenter-color-primary-text">#DCDFE4</value>
+  </custom>
 </component>
