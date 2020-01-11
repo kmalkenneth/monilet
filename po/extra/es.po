@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-10 15:16+0100\n"
+"POT-Creation-Date: 2020-01-11 13:56+0100\n"
 "PO-Revision-Date: 2020-01-10 14:59+0100\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -20,7 +20,7 @@ msgstr ""
 #: data/com.github.kmal-kenneth.monilet.desktop.in:3
 #: data/com.github.kmal-kenneth.monilet.appdata.xml.in:7
 msgid "Monilet"
-msgstr ""
+msgstr "Monilet"
 
 #: data/com.github.kmal-kenneth.monilet.desktop.in:4
 #: data/com.github.kmal-kenneth.monilet.appdata.xml.in:8
@@ -33,7 +33,7 @@ msgstr "Es un widget monitor del sistema"
 
 #: data/com.github.kmal-kenneth.monilet.desktop.in:8
 msgid "com.github.kmal-kenneth.monilet"
-msgstr ""
+msgstr "com.github.kmal-kenneth.monilet"
 
 #: data/com.github.kmal-kenneth.monilet.desktop.in:12
 #, fuzzy
@@ -61,43 +61,47 @@ msgstr "Mueva la ventana arrastrando cualquier parte de ella."
 msgid "Quit with the handy shortcut Ctrl + Q"
 msgstr "Salga con el práctico atajo Ctrl + Q"
 
-#: data/com.github.kmal-kenneth.monilet.appdata.xml.in:25
-msgid "Kenet Acuña"
+#: data/com.github.kmal-kenneth.monilet.appdata.xml.in:23
+msgid "Release: Add Polish to the supported languages."
 msgstr ""
 
-#: data/com.github.kmal-kenneth.monilet.appdata.xml.in:35
+#: data/com.github.kmal-kenneth.monilet.appdata.xml.in:28
 msgid "Release: Arriving in Juno."
 msgstr "Lanzamiento: Llegando a Juno."
 
-#: data/com.github.kmal-kenneth.monilet.appdata.xml.in:40
+#: data/com.github.kmal-kenneth.monilet.appdata.xml.in:33
 msgid "Release: Fixed of the capacity of minimization and form."
 msgstr "Lanzamiento: Se corrigió la capacidad de minimización y forma."
 
-#: data/com.github.kmal-kenneth.monilet.appdata.xml.in:42
+#: data/com.github.kmal-kenneth.monilet.appdata.xml.in:35
 msgid "Now it is not minimized by pressing the icon in the dock."
 msgstr "Ahora no se minimiza presionando el icono en el dock."
 
-#: data/com.github.kmal-kenneth.monilet.appdata.xml.in:43
+#: data/com.github.kmal-kenneth.monilet.appdata.xml.in:36
 msgid "Again it shows the rounded edges."
 msgstr "Nuevamente muestra los bordes redondeados"
 
-#: data/com.github.kmal-kenneth.monilet.appdata.xml.in:44
+#: data/com.github.kmal-kenneth.monilet.appdata.xml.in:37
 msgid "The close button is present again but the color of the widget."
 msgstr "El botón de cierre está presente nuevamente pero el color del widget."
 
-#: data/com.github.kmal-kenneth.monilet.appdata.xml.in:50
+#: data/com.github.kmal-kenneth.monilet.appdata.xml.in:43
 msgid "Release: Add icons, hide the base icon and remove the close button."
 msgstr ""
 "Liberar: Agregar iconos, ocultar el icono base y eliminar el botón de cierre."
 
-#: data/com.github.kmal-kenneth.monilet.appdata.xml.in:52
+#: data/com.github.kmal-kenneth.monilet.appdata.xml.in:45
 msgid "Added icons in different sizes (128, 64, 48, 32)"
 msgstr "Se agregaron iconos en diferentes tamaños (128, 64, 48, 32)"
 
-#: data/com.github.kmal-kenneth.monilet.appdata.xml.in:53
+#: data/com.github.kmal-kenneth.monilet.appdata.xml.in:46
 msgid "It is no longer shown in the dock"
 msgstr "Ya no se muestra en el muelle"
 
-#: data/com.github.kmal-kenneth.monilet.appdata.xml.in:54
+#: data/com.github.kmal-kenneth.monilet.appdata.xml.in:47
 msgid "The close button was removed"
 msgstr "El botón de cerrar fue eliminado"
+
+#: data/com.github.kmal-kenneth.monilet.appdata.xml.in:86
+msgid "Kenet Acuña"
+msgstr ""
