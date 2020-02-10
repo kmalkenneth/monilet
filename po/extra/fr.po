@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-11 13:56+0100\n"
+"POT-Creation-Date: 2020-02-09 20:39-0600\n"
 "PO-Revision-Date: 2020-01-11 13:56+0100\n"
 "Last-Translator: Nathan Bonnemains (@NathanBnm)\n"
 "Language-Team: none\n"
@@ -61,49 +61,63 @@ msgid "Quit with the handy shortcut Ctrl + Q"
 msgstr "Quittez l'application avec le raccourci pratique Ctrl + Q"
 
 #: data/com.github.kmal-kenneth.monilet.appdata.xml.in:23
+msgid ""
+"Release: It works on small details, such as languages and store previews."
+msgstr "Lancement : Travaille sur les petits détails, comme les langues et l'aperçu dans la boutique."
+
+#: data/com.github.kmal-kenneth.monilet.appdata.xml.in:25
+#, fuzzy
+msgid "Add French to the supported languages."
+msgstr "Version : Ajout du polonais aux langues prises en charge."
+
+#: data/com.github.kmal-kenneth.monilet.appdata.xml.in:26
+msgid "Fixed the preview error in the store."
+msgstr "Correction de l'erreur de prévisualisation dans le magasin."
+
+#: data/com.github.kmal-kenneth.monilet.appdata.xml.in:32
 msgid "Release: Add Polish to the supported languages."
 msgstr "Version : Ajout du polonais aux langues prises en charge."
 
-#: data/com.github.kmal-kenneth.monilet.appdata.xml.in:28
+#: data/com.github.kmal-kenneth.monilet.appdata.xml.in:37
 msgid "Release: Arriving in Juno."
 msgstr "Version : Débarquement sur Juno."
 
-#: data/com.github.kmal-kenneth.monilet.appdata.xml.in:33
+#: data/com.github.kmal-kenneth.monilet.appdata.xml.in:42
 msgid "Release: Fixed of the capacity of minimization and form."
 msgstr "Version : Correction de la minimisation et de la forme de la fenêtre."
 
-#: data/com.github.kmal-kenneth.monilet.appdata.xml.in:35
+#: data/com.github.kmal-kenneth.monilet.appdata.xml.in:44
 msgid "Now it is not minimized by pressing the icon in the dock."
 msgstr ""
 "Désormais l'application n'est plus minimisée lors du clic sur l'icône dans "
 "le dock."
 
-#: data/com.github.kmal-kenneth.monilet.appdata.xml.in:36
+#: data/com.github.kmal-kenneth.monilet.appdata.xml.in:45
 msgid "Again it shows the rounded edges."
 msgstr "Retour des coins arrondis."
 
-#: data/com.github.kmal-kenneth.monilet.appdata.xml.in:37
+#: data/com.github.kmal-kenneth.monilet.appdata.xml.in:46
 msgid "The close button is present again but the color of the widget."
 msgstr "Retour du bouton de fermeture mais de la couleur de la fenêtre."
 
-#: data/com.github.kmal-kenneth.monilet.appdata.xml.in:43
+#: data/com.github.kmal-kenneth.monilet.appdata.xml.in:52
 msgid "Release: Add icons, hide the base icon and remove the close button."
 msgstr ""
 "Version : Ajout d'icônes, icône de base masquée et suppression du bouton de "
 "fermeture."
 
-#: data/com.github.kmal-kenneth.monilet.appdata.xml.in:45
+#: data/com.github.kmal-kenneth.monilet.appdata.xml.in:54
 msgid "Added icons in different sizes (128, 64, 48, 32)"
 msgstr "Ajout des icônes dans différentes tailles (128, 64, 48, 32)"
 
-#: data/com.github.kmal-kenneth.monilet.appdata.xml.in:46
+#: data/com.github.kmal-kenneth.monilet.appdata.xml.in:55
 msgid "It is no longer shown in the dock"
 msgstr "L'application n'est plus visible dans le dock."
 
-#: data/com.github.kmal-kenneth.monilet.appdata.xml.in:47
+#: data/com.github.kmal-kenneth.monilet.appdata.xml.in:56
 msgid "The close button was removed"
 msgstr "Le bouton de fermeture a été retiré"
 
-#: data/com.github.kmal-kenneth.monilet.appdata.xml.in:86
+#: data/com.github.kmal-kenneth.monilet.appdata.xml.in:96
 msgid "Kenet Acuña"
 msgstr "Kenet Acuña"

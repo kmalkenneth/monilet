@@ -1,3 +1,11 @@
+com.github.kmal-kenneth.monilet (0.2.3) precise; urgency=low
+
+  * Add French to the supported languages.
+  * Fixed the preview error in the store.
+
+
+ -- Kenet Mauricio Acuña Lago <kmal.kenneth@live.com>  Fri, 10 Jan 2020 22:16:00 -000
+
 com.github.kmal-kenneth.monilet (0.2.1) precise; urgency=low
 
   * Add Polish to the supported languages.

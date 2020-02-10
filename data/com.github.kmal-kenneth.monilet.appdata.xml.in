@@ -18,6 +18,15 @@
     <binary>com.github.kmal-kenneth.monilet</binary>
   </provides>
   <releases>
+    <release version="0.2.2" date="2020-02-09">
+      <description>
+        <p>Release: It works on small details, such as languages and store previews.</p>
+        <ul>
+          <li>Add French to the supported languages.</li>
+          <li>Fixed the preview error in the store.</li>
+        </ul>
+      </description>
+    </release>
     <release version="0.2.1" date="2020-01-10">
       <description>
         <p>Release: Add Polish to the supported languages.</p>
@@ -51,7 +60,8 @@
   </releases>
   <screenshots>
     <screenshot type="default">
-      <image>https://raw.githubusercontent.com/kmal-kenneth/monilet/master/data/screenshot.png</image>
+      <image>https://raw.github.com/kmal-kenneth/monilet/master/data/images/screenshot.png</image>
+      <image>https://raw.github.com/kmal-kenneth/monilet/master/data/images/screenshot1.png</image>
     </screenshot>
   </screenshots>
   <content_rating type="oars-1.1">
