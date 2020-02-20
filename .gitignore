@@ -2,6 +2,7 @@
 
 # Build folder
 build
+debian
 
 # Temp files
 *~
