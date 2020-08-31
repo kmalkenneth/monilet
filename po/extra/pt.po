@@ -1,0 +1,124 @@
+# Portuguese (Portugal) translations for com.github.kmal-kenneth.monilet package.
+# Copyright (C) 2020 THE com.github.kmal-kenneth.monilet'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the com.github.kmal-kenneth.monilet package.
+# André Barata <andretiagob@protonmail.com>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: extra\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-09 20:39-0600\n"
+"PO-Revision-Date: 2020-08-31 16:16+0100\n"
+"Language-Team: none\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.4.1\n"
+"Last-Translator: André Barata <andretiagob@protonmail.com>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: pt\n"
+
+#: data/com.github.kmal-kenneth.monilet.desktop.in:3
+#: data/com.github.kmal-kenneth.monilet.appdata.xml.in:7
+msgid "Monilet"
+msgstr "Monilet"
+
+#: data/com.github.kmal-kenneth.monilet.desktop.in:4
+#: data/com.github.kmal-kenneth.monilet.appdata.xml.in:8
+msgid "A monitor widget."
+msgstr "Um monitor widget."
+
+#: data/com.github.kmal-kenneth.monilet.desktop.in:5
+msgid "It's a system monitor widget."
+msgstr "É um monitor de widget do sistema."
+
+#: data/com.github.kmal-kenneth.monilet.desktop.in:8
+msgid "com.github.kmal-kenneth.monilet"
+msgstr "com.github.kmal-kenneth.monilet"
+
+#: data/com.github.kmal-kenneth.monilet.desktop.in:12
+msgid "Monitor;widget;"
+msgstr "Monitor;widget;"
+
+#: data/com.github.kmal-kenneth.monilet.appdata.xml.in:10
+msgid ""
+"See percentage of use your CPU and number of cores. Also percentage used "
+"memory, amount of memory used and total memory."
+msgstr ""
+"Veja a percentagem de utilização do seu Processador e do número de "
+"núcleos. Veja também a percentagem usada da memória, quantidade de "
+"memória e memória total."
+
+#: data/com.github.kmal-kenneth.monilet.appdata.xml.in:12
+msgid "Stays out of your way by always sticking to the desktop"
+msgstr ""
+"Sai do seu caminho ficando sempre colada no seu ambiente de trabalho"
+
+#: data/com.github.kmal-kenneth.monilet.appdata.xml.in:13
+msgid "Move the window by dragging any part of it"
+msgstr "Mova a janela ao arrastar em qualquer parte dela"
+
+#: data/com.github.kmal-kenneth.monilet.appdata.xml.in:14
+msgid "Quit with the handy shortcut Ctrl + Q"
+msgstr "Saía com o atalho conveniente Ctrl + Q"
+
+#: data/com.github.kmal-kenneth.monilet.appdata.xml.in:23
+msgid ""
+"Release: It works on small details, such as languages and store previews."
+msgstr ""
+"Lançamento: Algum trabalho relacionado com pequenos detalhes, como "
+"linguagens e antivisões na loja."
+
+#: data/com.github.kmal-kenneth.monilet.appdata.xml.in:25
+msgid "Add French to the supported languages."
+msgstr "Francês adicionado às línguas suportadas."
+
+#: data/com.github.kmal-kenneth.monilet.appdata.xml.in:26
+msgid "Fixed the preview error in the store."
+msgstr "Correção do erro de antevisão na loja."
+
+#: data/com.github.kmal-kenneth.monilet.appdata.xml.in:32
+msgid "Release: Add Polish to the supported languages."
+msgstr "Lançamento: Polaco adicionado às línguas suportadas."
+
+#: data/com.github.kmal-kenneth.monilet.appdata.xml.in:37
+msgid "Release: Arriving in Juno."
+msgstr "Lançamento: A chegar ao Juno."
+
+#: data/com.github.kmal-kenneth.monilet.appdata.xml.in:42
+msgid "Release: Fixed of the capacity of minimization and form."
+msgstr "Lançamento: Correção da capacidade de minimizar e da forma."
+
+#: data/com.github.kmal-kenneth.monilet.appdata.xml.in:44
+msgid "Now it is not minimized by pressing the icon in the dock."
+msgstr "Agora já não é minimizado ao pressionar o ícone na doca."
+
+#: data/com.github.kmal-kenneth.monilet.appdata.xml.in:45
+msgid "Again it shows the rounded edges."
+msgstr "Mostra os contornos redondos."
+
+#: data/com.github.kmal-kenneth.monilet.appdata.xml.in:46
+msgid "The close button is present again but the color of the widget."
+msgstr "O botão de fechar está novamente presente mas com a cor do widget."
+
+#: data/com.github.kmal-kenneth.monilet.appdata.xml.in:52
+msgid "Release: Add icons, hide the base icon and remove the close button."
+msgstr ""
+"Lançamento: Ícones adicionados, ícone de base escondido e botão de "
+"fechar removido."
+
+#: data/com.github.kmal-kenneth.monilet.appdata.xml.in:54
+msgid "Added icons in different sizes (128, 64, 48, 32)"
+msgstr "Ícones de diferentes tamanhos adicionados (128, 64, 48, 32)"
+
+#: data/com.github.kmal-kenneth.monilet.appdata.xml.in:55
+msgid "It is no longer shown in the dock"
+msgstr "Já não é mostrado na doca"
+
+#: data/com.github.kmal-kenneth.monilet.appdata.xml.in:56
+msgid "The close button was removed"
+msgstr "O botão de fechar foi removido"
+
+#: data/com.github.kmal-kenneth.monilet.appdata.xml.in:96
+msgid "Kenet Acuña"
+msgstr "Kenet Acuña"
